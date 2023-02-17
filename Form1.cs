@@ -17,9 +17,10 @@ namespace Kassasysteem
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CategoryButton_1(object sender, EventArgs e)
         {
-
+            HidePanels();
+            PanelCategory_1.Visible = true;
         }
 
         private void button45_Click(object sender, EventArgs e)
@@ -35,6 +36,16 @@ namespace Kassasysteem
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void HidePanels()
+        {
+            PanelCategory_1.Visible = false;
+        }
+
+        private void PanelCategory_1_Paint(object sender, PaintEventArgs e)
+        {
+            PanelCategory_1.Visible = true;
         }
     }
 }
