@@ -15,15 +15,49 @@ namespace Kassasysteem
     public partial class Form1 : Form
     {
         private List<Product> _products= new List<Product>();
+        private double endPrice = 0.00;
+        FlowLayoutPanel zuivelPanel = new FlowLayoutPanel();
+        FlowLayoutPanel groentePanel = new FlowLayoutPanel();
+        FlowLayoutPanel fruitPanel = new FlowLayoutPanel();
+        FlowLayoutPanel vleesPanel = new FlowLayoutPanel();
+        FlowLayoutPanel kaasPanel = new FlowLayoutPanel();
+        FlowLayoutPanel drankPanel = new FlowLayoutPanel();
+        FlowLayoutPanel broodPanel = new FlowLayoutPanel();
 
         public Form1()
         {
             InitializeComponent();
-            tabControl_1.ItemSize = new Size(0, 1);
-            tabControl_1.SizeMode = TabSizeMode.Fixed;
             LoadFromFile();
+            panelInitializer();
         }
 
+        private void panelInitializer()
+        {
+            zuivelPanel.Size = placeholderPanel.Size;
+            zuivelPanel.Name = "Zuivel";
+            zuivelPanel.Visible = true; //This is the first panel you see
+            groentePanel.Size = placeholderPanel.Size;
+            groentePanel.Name = "Groente";
+            fruitPanel.Size = placeholderPanel.Size;
+            fruitPanel.Name = "Fruit";
+            vleesPanel.Size = placeholderPanel.Size;
+            vleesPanel.Name = "Vlees";
+            kaasPanel.Size = placeholderPanel.Size;
+            kaasPanel.Name = "Kaas";
+            drankPanel.Size = placeholderPanel.Size;
+            drankPanel.Name = "Drank";
+            broodPanel.Size = placeholderPanel.Size;
+            broodPanel.Name = "Brood";
+
+            placeholderPanel.Controls.Add(zuivelPanel);
+            placeholderPanel.Controls.Add(groentePanel);
+            placeholderPanel.Controls.Add(fruitPanel);
+            placeholderPanel.Controls.Add(vleesPanel);
+            placeholderPanel.Controls.Add(kaasPanel);
+            placeholderPanel.Controls.Add(drankPanel);
+            placeholderPanel.Controls.Add(broodPanel);
+
+        }
         private void LoadFromFile()
         {
             string json = System.IO.File.ReadAllText("Products.json");
@@ -37,73 +71,116 @@ namespace Kassasysteem
 
                 button.Name = product.ProductName;
                 button.Text = product.ProductName;
+                button.Click += buttonProduct_Click;
 
-                //button.Click += buttonProduct_Click;
+                if (product.Category == "Zuivel")
+                {
+                    zuivelPanel.Controls.Add(button);
+                }
+                else if (product.Category == "Groente")
+                {
+                    groentePanel.Controls.Add(button);
+                }
+                else if (product.Category == "Fruit")
+                {
+                    fruitPanel.Controls.Add(button);
+                }
+                else if (product.Category == "Vlees")
+                {
+                    vleesPanel.Controls.Add(button);
+                }
+                else if (product.Category == "Kaas")
+                {
+                    kaasPanel.Controls.Add(button);
+                }
+                else if (product.Category == "Drank")
+                {
+                    drankPanel.Controls.Add(button);
+                }
+                else if (product.Category == "Brood")
+                {
+                    broodPanel.Controls.Add(button);
+                }
+            }
+        }
+        private void buttonProduct_Click(object sender, EventArgs e)
+        {
+            Button productButton = (Button)sender;
+            foreach (Product product in _products)
+            {
+                if (productButton.Name == product.ProductName)
+                {
+                    if (product.Amount == 0)
+                    {
+                        product.Amount = 1;
+                        String[] items = { product.ProductName, product.Amount.ToString(), product.Price.ToString() };
+                        ListViewItem productitem = new ListViewItem(items);
+                        listView1.Items.Add(productitem);
+                    }
+                    else
+                    {
+                        product.Amount += 1;
+                        String[] items = { product.ProductName, product.Amount.ToString(), product.Price.ToString() };
+                        ListViewItem productitem = new ListViewItem(items);
+                        int index = 0;
+                        foreach (ListViewItem item in listView1.Items)
+                        {
+                            if (product.ProductName == item.Text)
+                            {
+                                listView1.Items[index] = productitem;
+                            }
+                            else
+                            {
+                                index += 1;
+                            }
+                        }
+                    }
+                    
+                    foreach (ListViewItem item in listView1.Items)
+                    {
+                       
+                    }
+                    
+                    //productitem.SubItems.Add(product.ProductName);
+                    //productitem.SubItems[0]. = product.ProductName;
+                    
+                   
+                    //productitem.SubItems.Add(product.Price);
 
-                flowLayoutPanel_Zuivel.Controls.Add(button);
+
+                    //OrderListBox.Items.Add($"{product.ProductName} \t€{product.Price},-");
+                    //if (productButton.Name.Length <= 7)
+                    //{
+                    //    ActiveOrder.Items.Add($"{product.ProductName}, "%-20s", € {product.Price},-");
+                    //}
+                    //else if (productButton.Name.Length >= 13)
+                    //{
+                    //    ActiveOrder.Items.Add($"{product.ProductName}, \t\t\t\t € {product.Price},-", 20);
+                    //}
+                    //else
+                    //{
+                    //    ActiveOrder.Items.Add($"{product.ProductName}, \t\t\t\t\t € {product.Price},-");
+                    //}
+                    //endPrice += product.Price;
+                }
             }
         }
 
-        //private void buttonProduct_Click;
-
-        private void InitialiseButtons()
+        private void switchPanel(object sender, EventArgs e)
         {
-            
-        }
-        private void InitialiseCategories()
-        {
-
-
-        }
-
-        private void CategoryButton_1_Click(object sender, EventArgs e)
-        {
-            tabControl_1.SelectedTab = Category_1;
-        }
-
-        private void CategoryButton_2_Click(object sender, EventArgs e)
-        {
-            tabControl_1.SelectedTab = Category_2;
-        }
-
-        private void CategoryButton_3_Click(object sender, EventArgs e)
-        {
-            tabControl_1.SelectedTab = Category_3;
-        }
-
-        private void CategoryButton_4_Click(object sender, EventArgs e)
-        {
-            tabControl_1.SelectedTab = Category_4;
-        }
-
-        private void CategoryButton_5_Click(object sender, EventArgs e)
-        {
-            tabControl_1.SelectedTab = Category_5;
-        }
-
-        private void CategoryButton_6_Click(object sender, EventArgs e)
-        {
-            tabControl_1.SelectedTab = Category_6;
-        }
-
-        private void CategoryButton_7_Click(object sender, EventArgs e)
-        {
-            tabControl_1.SelectedTab = Category_7;
-        }
-
-        private void ProductButton_C1_5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProductButton_C1_10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            Button categoryButton = (Button)sender;
+            foreach (Control control in placeholderPanel.Controls)
+            {
+                FlowLayoutPanel panel = (FlowLayoutPanel)control;
+                if (panel.Name == categoryButton.Text)
+                {
+                    panel.Visible = true;
+                }
+                else
+                {
+                    panel.Visible = false;
+                }
+            }
         }
     }
 }

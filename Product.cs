@@ -8,16 +8,13 @@ namespace Kassasysteem
 {
     internal class Product
     {
-        public string Category { get; private set; }
-        public string ProductName { get; private set; }
-        public double Price { get; private set; }
-
-        
-        public Product(string _category, string _productname, double _price) 
+        public string Category { get; set; }
+        public string ProductName { get; set; }
+        public double Price { get; set; }
+        public int Amount { get; set; }
+        public Product() 
         {
-            Category = _category;
-            ProductName = _productname;
-            Price = _price;
+            Amount = 0;
         }
     }
 }

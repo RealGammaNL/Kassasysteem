@@ -34,7 +34,6 @@
     "ProductName": "Vla",
     "Price": 3.10
   },
-
   {
     "Category": "Groente",
     "ProductName": "Sla",
@@ -245,5 +244,10 @@
     "Category": "Brood",
     "ProductName": "Bruin Brood",
     "Price": 1.75
+  },
+  {
+    "Category": "Kaas",
+    "ProductName": "Rode Kaas",
+    "Price": 7.30
   }
 ]
