@@ -63,5 +63,10 @@ namespace Kassasysteem
         {
             tabControl_1.SelectedTab = Category_7;
         }
+
+        private void ProductButton_C1_5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
