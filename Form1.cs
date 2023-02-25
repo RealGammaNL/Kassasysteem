@@ -21,13 +21,31 @@ namespace Kassasysteem
             InitializeComponent();
             tabControl_1.ItemSize = new Size(0, 1);
             tabControl_1.SizeMode = TabSizeMode.Fixed;
+            LoadFromFile();
         }
 
         private void LoadFromFile()
         {
             string json = System.IO.File.ReadAllText("Products.json");
             _products = JsonSerializer.Deserialize<List<Product>>(json);
+
+            foreach (Product product in _products)
+            {
+                Button button = new Button();
+                button.Width = 100;
+                button.Height = 100;
+
+                button.Name = product.ProductName;
+                button.Text = product.ProductName;
+
+                //button.Click += buttonProduct_Click;
+
+                flowLayoutPanel_Zuivel.Controls.Add(button);
+            }
         }
+
+        //private void buttonProduct_Click;
+
         private void InitialiseButtons()
         {
             
@@ -79,6 +97,11 @@ namespace Kassasysteem
         }
 
         private void ProductButton_C1_10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
