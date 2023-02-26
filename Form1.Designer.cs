@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.ZuivelButton = new System.Windows.Forms.Button();
-            this.OrderListBox = new System.Windows.Forms.ListBox();
             this.GroenteButton = new System.Windows.Forms.Button();
             this.FruitButton = new System.Windows.Forms.Button();
             this.DrankButton = new System.Windows.Forms.Button();
             this.KaasButton = new System.Windows.Forms.Button();
             this.VleesButton = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
+            this.DelProdButton = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
@@ -49,15 +48,13 @@
             this.button39 = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
             this.BroodButton = new System.Windows.Forms.Button();
-            this.button50 = new System.Windows.Forms.Button();
-            this.button51 = new System.Windows.Forms.Button();
-            this.button52 = new System.Windows.Forms.Button();
-            this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CheckoutButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.DelLineButton = new System.Windows.Forms.Button();
             this.placeholderPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.OrderLabel = new System.Windows.Forms.Label();
             this.PriceTotal = new System.Windows.Forms.Label();
-            this.AmountLabel = new System.Windows.Forms.Label();
+            this.TotalPriceLabel = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Product = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -74,16 +71,6 @@
             this.ZuivelButton.Text = "Zuivel";
             this.ZuivelButton.UseVisualStyleBackColor = true;
             this.ZuivelButton.Click += new System.EventHandler(this.switchPanel);
-            // 
-            // OrderListBox
-            // 
-            this.OrderListBox.FormattingEnabled = true;
-            this.OrderListBox.Location = new System.Drawing.Point(6, 33);
-            this.OrderListBox.Margin = new System.Windows.Forms.Padding(2);
-            this.OrderListBox.Name = "OrderListBox";
-            this.OrderListBox.Size = new System.Drawing.Size(203, 238);
-            this.OrderListBox.TabIndex = 1;
-            this.OrderListBox.Tag = "";
             // 
             // GroenteButton
             // 
@@ -140,15 +127,16 @@
             this.VleesButton.UseVisualStyleBackColor = true;
             this.VleesButton.Click += new System.EventHandler(this.switchPanel);
             // 
-            // button33
+            // DelProdButton
             // 
-            this.button33.Location = new System.Drawing.Point(6, 277);
-            this.button33.Margin = new System.Windows.Forms.Padding(2);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(80, 80);
-            this.button33.TabIndex = 25;
-            this.button33.Text = "Add";
-            this.button33.UseVisualStyleBackColor = true;
+            this.DelProdButton.Location = new System.Drawing.Point(6, 277);
+            this.DelProdButton.Margin = new System.Windows.Forms.Padding(2);
+            this.DelProdButton.Name = "DelProdButton";
+            this.DelProdButton.Size = new System.Drawing.Size(80, 80);
+            this.DelProdButton.TabIndex = 25;
+            this.DelProdButton.Text = "Delete Product";
+            this.DelProdButton.UseVisualStyleBackColor = true;
+            this.DelProdButton.Click += new System.EventHandler(this.DelProdButton_Click);
             // 
             // button25
             // 
@@ -281,52 +269,39 @@
             this.BroodButton.UseVisualStyleBackColor = true;
             this.BroodButton.Click += new System.EventHandler(this.switchPanel);
             // 
-            // button50
+            // CheckoutButton
             // 
-            this.button50.Location = new System.Drawing.Point(6, 529);
-            this.button50.Margin = new System.Windows.Forms.Padding(2);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(80, 80);
-            this.button50.TabIndex = 54;
-            this.button50.Text = "Checkout";
-            this.button50.UseVisualStyleBackColor = true;
+            this.CheckoutButton.Location = new System.Drawing.Point(6, 529);
+            this.CheckoutButton.Margin = new System.Windows.Forms.Padding(2);
+            this.CheckoutButton.Name = "CheckoutButton";
+            this.CheckoutButton.Size = new System.Drawing.Size(80, 80);
+            this.CheckoutButton.TabIndex = 54;
+            this.CheckoutButton.Text = "Checkout";
+            this.CheckoutButton.UseVisualStyleBackColor = true;
+            this.CheckoutButton.Click += new System.EventHandler(this.CheckoutButton_Click);
             // 
-            // button51
+            // ClearButton
             // 
-            this.button51.Location = new System.Drawing.Point(6, 445);
-            this.button51.Margin = new System.Windows.Forms.Padding(2);
-            this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(80, 80);
-            this.button51.TabIndex = 53;
-            this.button51.Text = "Undo";
-            this.button51.UseVisualStyleBackColor = true;
+            this.ClearButton.Location = new System.Drawing.Point(6, 445);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(80, 80);
+            this.ClearButton.TabIndex = 53;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
-            // button52
+            // DelLineButton
             // 
-            this.button52.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button52.Location = new System.Drawing.Point(6, 361);
-            this.button52.Margin = new System.Windows.Forms.Padding(2);
-            this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(80, 80);
-            this.button52.TabIndex = 52;
-            this.button52.Text = "Delete";
-            this.button52.UseVisualStyleBackColor = true;
-            // 
-            // vScrollBar2
-            // 
-            this.vScrollBar2.Location = new System.Drawing.Point(341, 7);
-            this.vScrollBar2.Name = "vScrollBar2";
-            this.vScrollBar2.Size = new System.Drawing.Size(20, 264);
-            this.vScrollBar2.TabIndex = 71;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(369, 7);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 20);
-            this.textBox1.TabIndex = 72;
-            this.textBox1.Text = "Searchbar";
+            this.DelLineButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DelLineButton.Location = new System.Drawing.Point(6, 361);
+            this.DelLineButton.Margin = new System.Windows.Forms.Padding(2);
+            this.DelLineButton.Name = "DelLineButton";
+            this.DelLineButton.Size = new System.Drawing.Size(80, 80);
+            this.DelLineButton.TabIndex = 52;
+            this.DelLineButton.Text = "Delete Line";
+            this.DelLineButton.UseVisualStyleBackColor = true;
+            this.DelLineButton.Click += new System.EventHandler(this.DelLineButton_Click);
             // 
             // placeholderPanel
             // 
@@ -338,7 +313,7 @@
             // OrderLabel
             // 
             this.OrderLabel.AutoSize = true;
-            this.OrderLabel.Location = new System.Drawing.Point(11, 10);
+            this.OrderLabel.Location = new System.Drawing.Point(11, 15);
             this.OrderLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OrderLabel.Name = "OrderLabel";
             this.OrderLabel.Size = new System.Drawing.Size(33, 13);
@@ -348,22 +323,22 @@
             // PriceTotal
             // 
             this.PriceTotal.AutoSize = true;
-            this.PriceTotal.Location = new System.Drawing.Point(281, 9);
+            this.PriceTotal.Location = new System.Drawing.Point(289, 15);
             this.PriceTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PriceTotal.Name = "PriceTotal";
-            this.PriceTotal.Size = new System.Drawing.Size(58, 13);
+            this.PriceTotal.Size = new System.Drawing.Size(37, 13);
             this.PriceTotal.TabIndex = 77;
-            this.PriceTotal.Text = "Price Total";
+            this.PriceTotal.Text = "€ 0.00";
             // 
-            // AmountLabel
+            // TotalPriceLabel
             // 
-            this.AmountLabel.AutoSize = true;
-            this.AmountLabel.Location = new System.Drawing.Point(219, 10);
-            this.AmountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.AmountLabel.Name = "AmountLabel";
-            this.AmountLabel.Size = new System.Drawing.Size(43, 13);
-            this.AmountLabel.TabIndex = 78;
-            this.AmountLabel.Text = "Amount";
+            this.TotalPriceLabel.AutoSize = true;
+            this.TotalPriceLabel.Location = new System.Drawing.Point(227, 15);
+            this.TotalPriceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TotalPriceLabel.Name = "TotalPriceLabel";
+            this.TotalPriceLabel.Size = new System.Drawing.Size(58, 13);
+            this.TotalPriceLabel.TabIndex = 78;
+            this.TotalPriceLabel.Text = "Total Price";
             // 
             // listView1
             // 
@@ -371,6 +346,7 @@
             this.Product,
             this.Amount,
             this.Price});
+            this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(6, 31);
@@ -383,16 +359,19 @@
             // Product
             // 
             this.Product.Text = "Product";
-            this.Product.Width = 206;
+            this.Product.Width = 179;
             // 
             // Amount
             // 
             this.Amount.Text = "Amount";
-            this.Amount.Width = 61;
+            this.Amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Amount.Width = 70;
             // 
             // Price
             // 
             this.Price.Text = "Price";
+            this.Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Price.Width = 72;
             // 
             // Form1
             // 
@@ -400,15 +379,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1116, 613);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.AmountLabel);
+            this.Controls.Add(this.TotalPriceLabel);
             this.Controls.Add(this.PriceTotal);
             this.Controls.Add(this.OrderLabel);
             this.Controls.Add(this.placeholderPanel);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.vScrollBar2);
-            this.Controls.Add(this.button50);
-            this.Controls.Add(this.button51);
-            this.Controls.Add(this.button52);
+            this.Controls.Add(this.CheckoutButton);
+            this.Controls.Add(this.ClearButton);
+            this.Controls.Add(this.DelLineButton);
             this.Controls.Add(this.BroodButton);
             this.Controls.Add(this.button37);
             this.Controls.Add(this.button38);
@@ -422,13 +399,12 @@
             this.Controls.Add(this.button28);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.button25);
-            this.Controls.Add(this.button33);
+            this.Controls.Add(this.DelProdButton);
             this.Controls.Add(this.DrankButton);
             this.Controls.Add(this.KaasButton);
             this.Controls.Add(this.VleesButton);
             this.Controls.Add(this.FruitButton);
             this.Controls.Add(this.GroenteButton);
-            this.Controls.Add(this.OrderListBox);
             this.Controls.Add(this.ZuivelButton);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -441,13 +417,12 @@
         #endregion
 
         private System.Windows.Forms.Button ZuivelButton;
-        private System.Windows.Forms.ListBox OrderListBox;
         private System.Windows.Forms.Button GroenteButton;
         private System.Windows.Forms.Button FruitButton;
         private System.Windows.Forms.Button DrankButton;
         private System.Windows.Forms.Button KaasButton;
         private System.Windows.Forms.Button VleesButton;
-        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.Button DelProdButton;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button27;
@@ -461,15 +436,13 @@
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
         private System.Windows.Forms.Button BroodButton;
-        private System.Windows.Forms.Button button50;
-        private System.Windows.Forms.Button button51;
-        private System.Windows.Forms.Button button52;
-        private System.Windows.Forms.VScrollBar vScrollBar2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button CheckoutButton;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Button DelLineButton;
         private System.Windows.Forms.FlowLayoutPanel placeholderPanel;
         private System.Windows.Forms.Label OrderLabel;
         private System.Windows.Forms.Label PriceTotal;
-        private System.Windows.Forms.Label AmountLabel;
+        private System.Windows.Forms.Label TotalPriceLabel;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader Product;
         private System.Windows.Forms.ColumnHeader Amount;

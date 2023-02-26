@@ -18,7 +18,6 @@ namespace Kassasysteem
     public partial class Form1 : Form
     {
         private List<Product> _products = new List<Product>();
-        private double endPrice = 0.00;
         Receipt Receipt = new Receipt();
         FlowLayoutPanel zuivelPanel = new FlowLayoutPanel();
         FlowLayoutPanel groentePanel = new FlowLayoutPanel();
@@ -114,7 +113,7 @@ namespace Kassasysteem
             if (productButton.Name == product.ProductName)
             {
                 Receipt.AddProduct(product);
-                String[] ItemStr = { product.ProductName, Receipt.ProductCount(product).ToString(), product.Price.ToString() };
+                String[] ItemStr = { product.ProductName, Receipt.ProductCount(product).ToString(), String.Format("{0:€ 0.00}", (product.Price * Receipt.ProductCount(product))) };
                 bool newProduct = true;
 
                 for (int i = 0; i < listView1.Items.Count; i++)
@@ -122,7 +121,8 @@ namespace Kassasysteem
                     if (listView1.Items[i].SubItems[0].Text == product.ProductName)
                     {
                         listView1.Items[i].SubItems[1].Text = Receipt.ProductCount(product).ToString();
-                        listView1.Items[i].SubItems[2].Text = (product.Price * Receipt.ProductCount(product)).ToString();
+                        listView1.Items[i].SubItems[2].Text = String.Format("{0:€ 0.00}", (product.Price * Receipt.ProductCount(product)));
+
                         newProduct = false;
                         break;
                     }
@@ -131,9 +131,11 @@ namespace Kassasysteem
                 if (newProduct)
                 {
                     ListViewItem Item = new ListViewItem(ItemStr);
+
                     listView1.Items.Add(Item);
                 }
             }
+            PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
         }
 
         //public void UpdateShoppingCart()
@@ -158,21 +160,21 @@ namespace Kassasysteem
         //                }
         //            }
 
-                    //foreach (ListViewItem item in listView1.Items)
-                    //{
-                    //    if (product.ProductName == item.Text)
-                    //    {
-                    //        listView1.Items[index] = Item;
-                    //    }
-                    //    else
-                    //    {
-                    //        index += 1;
-                    //    }
-                    //}
+        //foreach (ListViewItem item in listView1.Items)
+        //{
+        //    if (product.ProductName == item.Text)
+        //    {
+        //        listView1.Items[index] = Item;
+        //    }
+        //    else
+        //    {
+        //        index += 1;
+        //    }
+        //}
         //        }
         //    }
         //}
-            
+
 
         private void switchPanel(object sender, EventArgs e)
         {
@@ -189,6 +191,85 @@ namespace Kassasysteem
                     panel.Visible = false;
                 }
             }
+        }
+
+        //private void btnRemove_Click(object sender, EventArgs e)
+        //{
+
+        //    Product selectedProduct = lstReceipt.SelectedItem as Product;
+        //    if (selectedProduct != null)
+        //    {
+        //        TotalAmount -= selectedProduct.Price;
+        //        lstReceipt.Items.Remove(lstReceipt.SelectedItem);
+        //    }
+
+
+        //}
+
+        private void DelProdButton_Click(object sender, EventArgs e)
+        {
+            ListViewItem selectedItem = listView1.SelectedItems[0];
+            if (selectedItem != null)
+            {
+                if (Int32.Parse(selectedItem.SubItems[1].Text) == 0)
+                {
+                    listView1.Items.Remove(selectedItem);
+                }
+                else if (Int32.Parse(selectedItem.SubItems[1].Text) > 0)
+                {
+                    
+                    Product product = _products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
+                    int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
+                    Receipt.TotalPrice = Receipt.TotalPrice - product.Price;
+
+                    selectedItem.SubItems[1].Text = (Int32.Parse(selectedItem.SubItems[1].Text) - 1).ToString();
+                    selectedItem.SubItems[2].Text = String.Format("{0:€ 0.00}", (Int32.Parse(selectedItem.SubItems[1].Text) * product.Price));
+                    PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
+
+                    Receipt.DelItem(product);
+
+                    if (Int32.Parse(selectedItem.SubItems[1].Text) == 0)
+                    {
+                        listView1.Items.Remove(selectedItem);
+                    }
+                }
+                
+            }
+        }
+
+        private void DelLineButton_Click(object sender, EventArgs e)
+        {
+            ListViewItem selectedItem = listView1.SelectedItems[0];
+            if (selectedItem != null)
+            {
+                Product product = _products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
+                int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
+
+                Receipt.TotalPrice = Receipt.TotalPrice - (Amount * product.Price);
+                listView1.Items.Remove(selectedItem);
+                PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
+
+                Receipt.DelAllItems(product);
+            }
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            Receipt.TotalPrice = 0.00;
+            PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
+            Receipt.ClearList();
+        }
+
+        private void CheckoutButton_Click(object sender, EventArgs e)
+        {
+            Form form1 = this;
+            form1.Hide();
+            Form form2 = new Form();
+            form2.Size = new Size(500, 700);
+            form2.Location = new Point(0,0);
+            form2.ShowDialog();
+
         }
     }
 }
