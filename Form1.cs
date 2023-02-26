@@ -269,7 +269,6 @@ namespace Kassasysteem
             form2.Size = new Size(500, 700);
             form2.Location = new Point(0,0);
             form2.ShowDialog();
-
         }
     }
 }
