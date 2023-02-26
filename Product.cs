@@ -11,10 +11,5 @@ namespace Kassasysteem
         public string Category { get; set; }
         public string ProductName { get; set; }
         public double Price { get; set; }
-        public int Amount { get; set; }
-        public Product() 
-        {
-            Amount = 0;
-        }
     }
 }

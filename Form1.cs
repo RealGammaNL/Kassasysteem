@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Kassasysteem
 {
     public partial class Form1 : Form
     {
-        private List<Product> _products= new List<Product>();
+        private List<Product> _products = new List<Product>();
         private double endPrice = 0.00;
+        Receipt Receipt = new Receipt();
         FlowLayoutPanel zuivelPanel = new FlowLayoutPanel();
         FlowLayoutPanel groentePanel = new FlowLayoutPanel();
         FlowLayoutPanel fruitPanel = new FlowLayoutPanel();
@@ -106,65 +110,69 @@ namespace Kassasysteem
         private void buttonProduct_Click(object sender, EventArgs e)
         {
             Button productButton = (Button)sender;
-            foreach (Product product in _products)
+            Product product = _products.Find(p => p.ProductName == productButton.Name);
+            if (productButton.Name == product.ProductName)
             {
-                if (productButton.Name == product.ProductName)
+                Receipt.AddProduct(product);
+                String[] ItemStr = { product.ProductName, Receipt.ProductCount(product).ToString(), product.Price.ToString() };
+                bool newProduct = true;
+
+                for (int i = 0; i < listView1.Items.Count; i++)
                 {
-                    if (product.Amount == 0)
+                    if (listView1.Items[i].SubItems[0].Text == product.ProductName)
                     {
-                        product.Amount = 1;
-                        String[] items = { product.ProductName, product.Amount.ToString(), product.Price.ToString() };
-                        ListViewItem productitem = new ListViewItem(items);
-                        listView1.Items.Add(productitem);
+                        listView1.Items[i].SubItems[1].Text = Receipt.ProductCount(product).ToString();
+                        listView1.Items[i].SubItems[2].Text = (product.Price * Receipt.ProductCount(product)).ToString();
+                        newProduct = false;
+                        break;
                     }
-                    else
-                    {
-                        product.Amount += 1;
-                        String[] items = { product.ProductName, product.Amount.ToString(), product.Price.ToString() };
-                        ListViewItem productitem = new ListViewItem(items);
-                        int index = 0;
-                        foreach (ListViewItem item in listView1.Items)
-                        {
-                            if (product.ProductName == item.Text)
-                            {
-                                listView1.Items[index] = productitem;
-                            }
-                            else
-                            {
-                                index += 1;
-                            }
-                        }
-                    }
-                    
-                    foreach (ListViewItem item in listView1.Items)
-                    {
-                       
-                    }
-                    
-                    //productitem.SubItems.Add(product.ProductName);
-                    //productitem.SubItems[0]. = product.ProductName;
-                    
-                   
-                    //productitem.SubItems.Add(product.Price);
+                }
 
-
-                    //OrderListBox.Items.Add($"{product.ProductName} \t€{product.Price},-");
-                    //if (productButton.Name.Length <= 7)
-                    //{
-                    //    ActiveOrder.Items.Add($"{product.ProductName}, "%-20s", € {product.Price},-");
-                    //}
-                    //else if (productButton.Name.Length >= 13)
-                    //{
-                    //    ActiveOrder.Items.Add($"{product.ProductName}, \t\t\t\t € {product.Price},-", 20);
-                    //}
-                    //else
-                    //{
-                    //    ActiveOrder.Items.Add($"{product.ProductName}, \t\t\t\t\t € {product.Price},-");
-                    //}
-                    //endPrice += product.Price;
+                if (newProduct)
+                {
+                    ListViewItem Item = new ListViewItem(ItemStr);
+                    listView1.Items.Add(Item);
                 }
             }
         }
+
+        //public void UpdateShoppingCart()
+        //{
+        //    foreach (Product product in Receipt.Products)
+        //    {
+        //        if (Receipt.ProductCount(product) <= 1)
+        //        {
+        //            String[] ItemStr = { product.ProductName, Receipt.ProductCount(product).ToString(), product.Price.ToString() };
+        //            ListViewItem Item = new ListViewItem(ItemStr);
+        //            listView1.Items.Add(Item);
+        //        }
+        //        else
+        //        {
+        //            String[] ItemStr = { product.ProductName, Receipt.ProductCount(product).ToString(), product.Price.ToString() };
+        //            ListViewItem Item = new ListViewItem(ItemStr);
+        //            for (int i = 0; i < listView1.Items.Count; i++)
+        //            {
+        //                if (listView1.Items[i].SubItems[0].ToString() == Item.SubItems[0].ToString())
+        //                {
+        //                    listView1.Items[i].SubItems[1] = Item.SubItems[1];
+        //                }
+        //            }
+
+                    //foreach (ListViewItem item in listView1.Items)
+                    //{
+                    //    if (product.ProductName == item.Text)
+                    //    {
+                    //        listView1.Items[index] = Item;
+                    //    }
+                    //    else
+                    //    {
+                    //        index += 1;
+                    //    }
+                    //}
+        //        }
+        //    }
+        //}
+            
 
         private void switchPanel(object sender, EventArgs e)
         {
