@@ -15,7 +15,7 @@ using System.Xml.Linq;
 
 namespace Kassasysteem
 {
-    public partial class Form1 : Form
+    public partial class Cashregister : Form
     {
         private List<Product> _products = new List<Product>();
         Receipt Receipt = new Receipt();
@@ -27,11 +27,12 @@ namespace Kassasysteem
         FlowLayoutPanel drankPanel = new FlowLayoutPanel();
         FlowLayoutPanel broodPanel = new FlowLayoutPanel();
 
-        public Form1()
+        public Cashregister()
         {
             InitializeComponent();
             LoadFromFile();
             panelInitializer();
+            this.Hide();
         }
 
         private void panelInitializer()
@@ -270,5 +271,12 @@ namespace Kassasysteem
             form2.Location = new Point(0,0);
             form2.ShowDialog();
         }
+
+        //protected override void OnLoad(EventArgs e)
+        //{
+        //    Visible = false;
+        //    ShowInTaskbar = false;
+        //    base.OnLoad(e);
+        //}
     }
 }
