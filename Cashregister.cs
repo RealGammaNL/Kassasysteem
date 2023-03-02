@@ -222,7 +222,7 @@ namespace Kassasysteem
                 {
                     
                     Product product = _products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
-                    Receipt.TotalPrice = Receipt.TotalPrice - product.Price;
+                    Receipt.TotalPrice -= product.Price;
                     Amount--;
                     selectedItem.SubItems[1].Text = (Amount).ToString();
                     selectedItem.SubItems[2].Text = String.Format("{0:€ 0.00}", (Amount * product.Price));
