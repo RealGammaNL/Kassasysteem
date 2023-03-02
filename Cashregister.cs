@@ -212,24 +212,25 @@ namespace Kassasysteem
             ListViewItem selectedItem = listView1.SelectedItems[0];
             if (selectedItem != null)
             {
-                if (Int32.Parse(selectedItem.SubItems[1].Text) == 0)
+
+                int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
+                if (Amount == 0)
                 {
                     listView1.Items.Remove(selectedItem);
                 }
-                else if (Int32.Parse(selectedItem.SubItems[1].Text) > 0)
+                else if (Amount > 0)
                 {
                     
                     Product product = _products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
-                    int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
                     Receipt.TotalPrice = Receipt.TotalPrice - product.Price;
-
-                    selectedItem.SubItems[1].Text = (Int32.Parse(selectedItem.SubItems[1].Text) - 1).ToString();
-                    selectedItem.SubItems[2].Text = String.Format("{0:€ 0.00}", (Int32.Parse(selectedItem.SubItems[1].Text) * product.Price));
+                    Amount--;
+                    selectedItem.SubItems[1].Text = (Amount).ToString();
+                    selectedItem.SubItems[2].Text = String.Format("{0:€ 0.00}", (Amount * product.Price));
                     PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
 
                     Receipt.DelItem(product);
 
-                    if (Int32.Parse(selectedItem.SubItems[1].Text) == 0)
+                    if (Amount == 0)
                     {
                         listView1.Items.Remove(selectedItem);
                     }
