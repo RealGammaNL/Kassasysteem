@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kassasysteem
 {
-    internal class Customer
+    internal class User
     {
         public string Firstname { get; private set; }
         public string Lastname { get; private set; }
@@ -14,7 +14,7 @@ namespace Kassasysteem
         public string Password { get; private set; }
         public DateTime Birthdate { get; private set; }
 
-        public Customer(string firstname, string lastname, string email, string password, DateTime birthdate)
+        public User(string firstname, string lastname, string email, string password, DateTime birthdate)
         {
             Firstname = firstname;
             Lastname = lastname;

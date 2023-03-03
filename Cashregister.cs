@@ -77,33 +77,62 @@ namespace Kassasysteem
                 button.Text = product.ProductName;
                 button.Click += buttonProduct_Click;
 
-                if (product.Category == "Zuivel")
+                //if (product.Category == "Zuivel")
+                //{
+                //    zuivelPanel.Controls.Add(button);
+                //}
+                //else if (product.Category == "Groente")
+                //{
+                //    groentePanel.Controls.Add(button);
+                //}
+                //else if (product.Category == "Fruit")
+                //{
+                //    fruitPanel.Controls.Add(button);
+                //}
+                //else if (product.Category == "Vlees")
+                //{
+                //    vleesPanel.Controls.Add(button);
+                //}
+                //else if (product.Category == "Kaas")
+                //{
+                //    kaasPanel.Controls.Add(button);
+                //}
+                //else if (product.Category == "Drank")
+                //{
+                //    drankPanel.Controls.Add(button);
+                //}
+                //else if (product.Category == "Brood")
+                //{
+                //    broodPanel.Controls.Add(button);
+                //}
+
+                //Better version of the If/Else statement
+
+                switch (product.Category)
                 {
-                    zuivelPanel.Controls.Add(button);
-                }
-                else if (product.Category == "Groente")
-                {
-                    groentePanel.Controls.Add(button);
-                }
-                else if (product.Category == "Fruit")
-                {
-                    fruitPanel.Controls.Add(button);
-                }
-                else if (product.Category == "Vlees")
-                {
-                    vleesPanel.Controls.Add(button);
-                }
-                else if (product.Category == "Kaas")
-                {
-                    kaasPanel.Controls.Add(button);
-                }
-                else if (product.Category == "Drank")
-                {
-                    drankPanel.Controls.Add(button);
-                }
-                else if (product.Category == "Brood")
-                {
-                    broodPanel.Controls.Add(button);
+                    case "Zuivel":
+                        zuivelPanel.Controls.Add(button);
+                        break;
+                    case "Groente":
+                        groentePanel.Controls.Add(button);
+                        break;
+                    case "Fruit":
+                        fruitPanel.Controls.Add(button);
+                        break;
+                    case "Vlees":
+                        vleesPanel.Controls.Add(button);
+                        break;
+                    case "Kaas":
+                        kaasPanel.Controls.Add(button);
+                        break;
+                    case "Drank":
+                        drankPanel.Controls.Add(button);
+                        break;
+                    case "Brood":
+                        broodPanel.Controls.Add(button);
+                        break;
+                    default:
+                        break;
                 }
             }
         }
@@ -123,7 +152,7 @@ namespace Kassasysteem
                     {
                         listView1.Items[i].SubItems[1].Text = Receipt.ProductCount(product).ToString();
                         listView1.Items[i].SubItems[2].Text = String.Format("{0:€ 0.00}", (product.Price * Receipt.ProductCount(product)));
-
+                        
                         newProduct = false;
                         break;
                     }
@@ -138,44 +167,6 @@ namespace Kassasysteem
             }
             PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
         }
-
-        //public void UpdateShoppingCart()
-        //{
-        //    foreach (Product product in Receipt.Products)
-        //    {
-        //        if (Receipt.ProductCount(product) <= 1)
-        //        {
-        //            String[] ItemStr = { product.ProductName, Receipt.ProductCount(product).ToString(), product.Price.ToString() };
-        //            ListViewItem Item = new ListViewItem(ItemStr);
-        //            listView1.Items.Add(Item);
-        //        }
-        //        else
-        //        {
-        //            String[] ItemStr = { product.ProductName, Receipt.ProductCount(product).ToString(), product.Price.ToString() };
-        //            ListViewItem Item = new ListViewItem(ItemStr);
-        //            for (int i = 0; i < listView1.Items.Count; i++)
-        //            {
-        //                if (listView1.Items[i].SubItems[0].ToString() == Item.SubItems[0].ToString())
-        //                {
-        //                    listView1.Items[i].SubItems[1] = Item.SubItems[1];
-        //                }
-        //            }
-
-        //foreach (ListViewItem item in listView1.Items)
-        //{
-        //    if (product.ProductName == item.Text)
-        //    {
-        //        listView1.Items[index] = Item;
-        //    }
-        //    else
-        //    {
-        //        index += 1;
-        //    }
-        //}
-        //        }
-        //    }
-        //}
-
 
         private void switchPanel(object sender, EventArgs e)
         {
@@ -194,25 +185,11 @@ namespace Kassasysteem
             }
         }
 
-        //private void btnRemove_Click(object sender, EventArgs e)
-        //{
-
-        //    Product selectedProduct = lstReceipt.SelectedItem as Product;
-        //    if (selectedProduct != null)
-        //    {
-        //        TotalAmount -= selectedProduct.Price;
-        //        lstReceipt.Items.Remove(lstReceipt.SelectedItem);
-        //    }
-
-
-        //}
-
         private void DelProdButton_Click(object sender, EventArgs e)
         {
             ListViewItem selectedItem = listView1.SelectedItems[0];
             if (selectedItem != null)
             {
-
                 int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
                 if (Amount == 0)
                 {
