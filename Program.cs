@@ -16,7 +16,9 @@ namespace Kassasysteem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cashregister());
+            Application.Run(new Login());
+            //Application.Run(new Cashregister());
+
 
             // if this doesnt work look for MDI to switch between forms.
         }

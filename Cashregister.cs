@@ -27,12 +27,18 @@ namespace Kassasysteem
         FlowLayoutPanel drankPanel = new FlowLayoutPanel();
         FlowLayoutPanel broodPanel = new FlowLayoutPanel();
 
+        //private Login LoginForm;
+
         public Cashregister()
         {
-            InitializeComponent();
+            InitializeComponent();// Form Login
             LoadFromFile();
             panelInitializer();
-            this.Hide();
+            Hide();
+            //LoginForm = loginForm;
+            Register register = new Register();
+            User user = new User("Manager", "Cas", "Olischalger", "Jemoeder123@gmail.com", "Jemoeder123", DateTime.Now);
+            register.ChangeUser(user);
         }
 
         private void panelInitializer()

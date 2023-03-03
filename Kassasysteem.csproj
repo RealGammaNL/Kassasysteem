@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Register.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -107,6 +108,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Users.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Products.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
