@@ -52,7 +52,7 @@ namespace Kassasysteem
             Securitybox.ResetText();
             Firstname_box.Clear();
             Lastname_box.Clear();
-            Email_box.Clear();
+            Email_box.Text = "xxx@mail.com";
             Password_box.Clear();
             Yearbox.ResetText();
             Monthbox.ResetText();
@@ -61,6 +61,7 @@ namespace Kassasysteem
 
         public void SignInButton_Click(object sender, EventArgs e)
         {
+            bool found = false;
             foreach (User user in Register.Managers)
             {
                 //Debug.WriteLine(user.Email);
@@ -68,11 +69,8 @@ namespace Kassasysteem
                 {
                     Hide();
                     CashregisterForm.Show();
-                }
-                else
-                {
-                    LoginPassword_Box.Clear();
-                    IncorrectLabel.Show();
+                    found = true;
+                    break;
                 }
             }
             foreach (User user in Register.Employees)
@@ -81,12 +79,14 @@ namespace Kassasysteem
                 {
                     Hide();
                     CashregisterForm.Show();
+                    found = true;
+                    break;
                 }
-                else
-                {
-                    LoginPassword_Box.Clear();
-                    IncorrectLabel.Show();
-                }
+            }
+            if (!found)
+            {
+                LoginPassword_Box.Clear();
+                IncorrectLabel.Show();
             }
         }
     }

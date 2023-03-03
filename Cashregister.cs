@@ -193,48 +193,53 @@ namespace Kassasysteem
 
         private void DelProdButton_Click(object sender, EventArgs e)
         {
-            ListViewItem selectedItem = listView1.SelectedItems[0];
-            if (selectedItem != null)
+            if (listView1.SelectedItems.Count != 0)
             {
-                int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
-                if (Amount == 0)
+                ListViewItem selectedItem = listView1.SelectedItems[0];
+                if (selectedItem != null)
                 {
-                    listView1.Items.Remove(selectedItem);
-                }
-                else if (Amount > 0)
-                {
-                    
-                    Product product = _products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
-                    Receipt.TotalPrice -= product.Price;
-                    Amount--;
-                    selectedItem.SubItems[1].Text = (Amount).ToString();
-                    selectedItem.SubItems[2].Text = String.Format("{0:€ 0.00}", (Amount * product.Price));
-                    PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
-
-                    Receipt.DelItem(product);
-
+                    int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
                     if (Amount == 0)
                     {
                         listView1.Items.Remove(selectedItem);
                     }
+                    else if (Amount > 0)
+                    {
+
+                        Product product = _products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
+                        Receipt.TotalPrice -= product.Price;
+                        Amount--;
+                        selectedItem.SubItems[1].Text = (Amount).ToString();
+                        selectedItem.SubItems[2].Text = String.Format("{0:€ 0.00}", (Amount * product.Price));
+                        PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
+
+                        Receipt.DelItem(product);
+
+                        if (Amount == 0)
+                        {
+                            listView1.Items.Remove(selectedItem);
+                        }
+                    }
                 }
-                
             }
         }
 
         private void DelLineButton_Click(object sender, EventArgs e)
         {
-            ListViewItem selectedItem = listView1.SelectedItems[0];
-            if (selectedItem != null)
+            if (listView1.SelectedItems.Count != 0)
             {
-                Product product = _products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
-                int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
+                ListViewItem selectedItem = listView1.SelectedItems[0];
+                if (selectedItem != null)
+                {
+                    Product product = _products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
+                    int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
 
-                Receipt.TotalPrice = Receipt.TotalPrice - (Amount * product.Price);
-                listView1.Items.Remove(selectedItem);
-                PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
+                    Receipt.TotalPrice = Receipt.TotalPrice - (Amount * product.Price);
+                    listView1.Items.Remove(selectedItem);
+                    PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
 
-                Receipt.DelAllItems(product);
+                    Receipt.DelAllItems(product);
+                }
             }
         }
 
