@@ -85,7 +85,7 @@
             this.CreateAccPanel.Controls.Add(this.FirstName_label);
             this.CreateAccPanel.Controls.Add(this.Firstname_box);
             this.CreateAccPanel.Location = new System.Drawing.Point(150, 63);
-            this.CreateAccPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CreateAccPanel.Margin = new System.Windows.Forms.Padding(2);
             this.CreateAccPanel.Name = "CreateAccPanel";
             this.CreateAccPanel.Size = new System.Drawing.Size(820, 549);
             this.CreateAccPanel.TabIndex = 10;
@@ -105,7 +105,7 @@
             // CreateButton
             // 
             this.CreateButton.Location = new System.Drawing.Point(134, 255);
-            this.CreateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CreateButton.Margin = new System.Windows.Forms.Padding(2);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(133, 39);
             this.CreateButton.TabIndex = 39;
@@ -128,7 +128,7 @@
             // 
             this.Password_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password_box.Location = new System.Drawing.Point(134, 188);
-            this.Password_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Password_box.Margin = new System.Windows.Forms.Padding(2);
             this.Password_box.Name = "Password_box";
             this.Password_box.PasswordChar = '*';
             this.Password_box.Size = new System.Drawing.Size(570, 23);
@@ -153,7 +153,7 @@
             "11",
             "12"});
             this.Monthbox.Location = new System.Drawing.Point(482, 214);
-            this.Monthbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Monthbox.Margin = new System.Windows.Forms.Padding(2);
             this.Monthbox.Name = "Monthbox";
             this.Monthbox.Size = new System.Drawing.Size(105, 25);
             this.Monthbox.TabIndex = 33;
@@ -196,7 +196,7 @@
             "30",
             "31"});
             this.Daybox.Location = new System.Drawing.Point(364, 214);
-            this.Daybox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Daybox.Margin = new System.Windows.Forms.Padding(2);
             this.Daybox.Name = "Daybox";
             this.Daybox.Size = new System.Drawing.Size(115, 25);
             this.Daybox.TabIndex = 32;
@@ -343,7 +343,7 @@
             "2022",
             "2023"});
             this.Yearbox.Location = new System.Drawing.Point(591, 214);
-            this.Yearbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yearbox.Margin = new System.Windows.Forms.Padding(2);
             this.Yearbox.Name = "Yearbox";
             this.Yearbox.Size = new System.Drawing.Size(113, 25);
             this.Yearbox.TabIndex = 30;
@@ -357,7 +357,7 @@
             "Manager",
             "Employee"});
             this.Securitybox.Location = new System.Drawing.Point(134, 80);
-            this.Securitybox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Securitybox.Margin = new System.Windows.Forms.Padding(2);
             this.Securitybox.Name = "Securitybox";
             this.Securitybox.Size = new System.Drawing.Size(570, 25);
             this.Securitybox.TabIndex = 28;
@@ -410,7 +410,7 @@
             // 
             this.Email_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Email_box.Location = new System.Drawing.Point(134, 161);
-            this.Email_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Email_box.Margin = new System.Windows.Forms.Padding(2);
             this.Email_box.Name = "Email_box";
             this.Email_box.Size = new System.Drawing.Size(570, 23);
             this.Email_box.TabIndex = 22;
@@ -431,7 +431,7 @@
             // 
             this.Lastname_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lastname_box.Location = new System.Drawing.Point(134, 134);
-            this.Lastname_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Lastname_box.Margin = new System.Windows.Forms.Padding(2);
             this.Lastname_box.Name = "Lastname_box";
             this.Lastname_box.Size = new System.Drawing.Size(570, 23);
             this.Lastname_box.TabIndex = 20;
@@ -451,7 +451,7 @@
             // 
             this.Firstname_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Firstname_box.Location = new System.Drawing.Point(134, 107);
-            this.Firstname_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Firstname_box.Margin = new System.Windows.Forms.Padding(2);
             this.Firstname_box.Name = "Firstname_box";
             this.Firstname_box.Size = new System.Drawing.Size(570, 23);
             this.Firstname_box.TabIndex = 18;
@@ -459,7 +459,7 @@
             // LoginButton
             // 
             this.LoginButton.Location = new System.Drawing.Point(11, 12);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(2);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(79, 49);
             this.LoginButton.TabIndex = 36;
@@ -470,7 +470,7 @@
             // CreateAccBtn
             // 
             this.CreateAccBtn.Location = new System.Drawing.Point(728, 12);
-            this.CreateAccBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CreateAccBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CreateAccBtn.Name = "CreateAccBtn";
             this.CreateAccBtn.Size = new System.Drawing.Size(79, 49);
             this.CreateAccBtn.TabIndex = 37;
@@ -484,7 +484,7 @@
             this.TopPanel.Controls.Add(this.LoginButton);
             this.TopPanel.Controls.Add(this.CreateAccBtn);
             this.TopPanel.Location = new System.Drawing.Point(150, -2);
-            this.TopPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TopPanel.Margin = new System.Windows.Forms.Padding(2);
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(820, 71);
             this.TopPanel.TabIndex = 11;
@@ -500,7 +500,7 @@
             this.LoginPanel.Controls.Add(this.LoginEmail_Label);
             this.LoginPanel.Controls.Add(this.LoginEmail_Box);
             this.LoginPanel.Location = new System.Drawing.Point(150, 66);
-            this.LoginPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginPanel.Margin = new System.Windows.Forms.Padding(2);
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(820, 549);
             this.LoginPanel.TabIndex = 41;
@@ -520,7 +520,7 @@
             // SignInButton
             // 
             this.SignInButton.Location = new System.Drawing.Point(134, 127);
-            this.SignInButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SignInButton.Margin = new System.Windows.Forms.Padding(2);
             this.SignInButton.Name = "SignInButton";
             this.SignInButton.Size = new System.Drawing.Size(149, 39);
             this.SignInButton.TabIndex = 39;
@@ -543,7 +543,7 @@
             // 
             this.LoginPassword_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginPassword_Box.Location = new System.Drawing.Point(134, 97);
-            this.LoginPassword_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginPassword_Box.Margin = new System.Windows.Forms.Padding(2);
             this.LoginPassword_Box.Name = "LoginPassword_Box";
             this.LoginPassword_Box.PasswordChar = '*';
             this.LoginPassword_Box.Size = new System.Drawing.Size(570, 23);
@@ -575,7 +575,7 @@
             // 
             this.LoginEmail_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginEmail_Box.Location = new System.Drawing.Point(134, 70);
-            this.LoginEmail_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginEmail_Box.Margin = new System.Windows.Forms.Padding(2);
             this.LoginEmail_Box.Name = "LoginEmail_Box";
             this.LoginEmail_Box.Size = new System.Drawing.Size(570, 23);
             this.LoginEmail_Box.TabIndex = 22;
@@ -588,10 +588,10 @@
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1116, 613);
             this.Controls.Add(this.TopPanel);
-            this.Controls.Add(this.CreateAccPanel);
             this.Controls.Add(this.LoginPanel);
+            this.Controls.Add(this.CreateAccPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
