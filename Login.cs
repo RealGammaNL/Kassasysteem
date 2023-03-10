@@ -15,18 +15,24 @@ namespace Kassasysteem
     {
         public Register Register = new Register();
         public Cashregister CashregisterForm = new Cashregister();
+
+
         public Login()
         {
             InitializeComponent();
             InitializeControls();
         }
 
+
         public void InitializeControls()
         {
+            LoginPanel.Show();
             CreateAccPanel.Hide();
-            LoginPanel.Hide();
+            ToCashBtn.Hide();
+            CreateAccBtn.Hide();
             IncorrectLabel.Hide();
         }
+
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
@@ -34,11 +40,13 @@ namespace Kassasysteem
             LoginPanel.Show();
         }
 
+
         private void CreateAccBtn_Click(object sender, EventArgs e)
         {
             LoginPanel.Hide();
             CreateAccPanel.Show();
         }
+
 
         public void CreateUser()
         {    
@@ -46,6 +54,8 @@ namespace Kassasysteem
             User user = new User(Securitybox.Text, Firstname_box.Text, Lastname_box.Text, Email_box.Text, Password_box.Text, Birthday);
             Register.AddUser(user);
         }
+
+
         private void CreateButton_Click(object sender, EventArgs e)
         {
             CreateUser();
@@ -59,6 +69,7 @@ namespace Kassasysteem
             Daybox.ResetText();
         }
 
+
         public void SignInButton_Click(object sender, EventArgs e)
         {
             bool found = false;
@@ -67,15 +78,17 @@ namespace Kassasysteem
                 //Debug.WriteLine(user.Email);
                 if (user.Email == LoginEmail_Box.Text && user.Password == LoginPassword_Box.Text)
                 {
-                    Hide();
-                    CashregisterForm.Show();
+                    LoginButton.Hide();
+                    LoginPanel.Hide();
+                    CreateAccBtn.Show();
+                    ToCashBtn.Show();
                     found = true;
                     break;
                 }
             }
             foreach (User user in Register.Employees)
             {
-                if (user.Email == LoginButton.Text && user.Password == LoginPassword_Box.Text)
+                if (user.Email == LoginEmail_Box.Text && user.Password == LoginPassword_Box.Text)
                 {
                     Hide();
                     CashregisterForm.Show();
@@ -89,7 +102,12 @@ namespace Kassasysteem
                 IncorrectLabel.Show();
             }
         }
-    }
 
-    
+
+        private void ToCashBtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            CashregisterForm.Show();
+        }
+    }
 }

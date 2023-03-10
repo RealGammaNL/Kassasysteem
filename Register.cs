@@ -13,8 +13,11 @@ namespace Kassasysteem
         public List<User> Employees { get; private set; } = new List<User>();
         public Register() 
         {
-            User testUser = new User("Manager", "Max", "Brosky", "max@brosky.net", "123", new DateTime(2003, 03, 11, 12, 00, 00));
-            AddUser(testUser);
+            User max = new User("Manager", "Max", "Brosky", "max@brosky.net", "123", new DateTime(2003, 03, 11, 12, 00, 00));
+            AddUser(max);
+            User sam = new User("Employee", "Sam", "Brosky", "sam@brosky.net", "321", new DateTime(2003, 03, 11, 12, 00, 00));
+            AddUser(sam);
+
         }
         public void AddUser(User user)
         {

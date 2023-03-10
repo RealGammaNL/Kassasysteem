@@ -38,6 +38,7 @@ namespace Kassasysteem
             //LoginForm = loginForm;
             Register register = new Register();
             User user = new User("Manager", "Cas", "Olischalger", "Jemoeder123@gmail.com", "Jemoeder123", DateTime.Now);
+
             register.ChangeUser(user);
         }
 
