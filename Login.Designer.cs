@@ -51,13 +51,13 @@
             this.CreateAccBtn = new System.Windows.Forms.Button();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.IncorrectLabel = new System.Windows.Forms.Label();
             this.SignInButton = new System.Windows.Forms.Button();
             this.LoginPassword_Label = new System.Windows.Forms.Label();
             this.LoginPassword_Box = new System.Windows.Forms.TextBox();
             this.Loginlabel = new System.Windows.Forms.Label();
             this.LoginEmail_Label = new System.Windows.Forms.Label();
             this.LoginEmail_Box = new System.Windows.Forms.TextBox();
-            this.IncorrectLabel = new System.Windows.Forms.Label();
             this.CreateAccPanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
             this.LoginPanel.SuspendLayout();
@@ -482,6 +482,16 @@
             this.LoginPanel.TabIndex = 41;
             this.LoginPanel.Visible = false;
             // 
+            // IncorrectLabel
+            // 
+            this.IncorrectLabel.AutoSize = true;
+            this.IncorrectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncorrectLabel.Location = new System.Drawing.Point(386, 172);
+            this.IncorrectLabel.Name = "IncorrectLabel";
+            this.IncorrectLabel.Size = new System.Drawing.Size(148, 20);
+            this.IncorrectLabel.TabIndex = 40;
+            this.IncorrectLabel.Text = "Incorrect, try again";
+            // 
             // SignInButton
             // 
             this.SignInButton.Location = new System.Drawing.Point(179, 156);
@@ -539,16 +549,6 @@
             this.LoginEmail_Box.TabIndex = 22;
             this.LoginEmail_Box.Text = "xxx@mail.net";
             // 
-            // IncorrectLabel
-            // 
-            this.IncorrectLabel.AutoSize = true;
-            this.IncorrectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncorrectLabel.Location = new System.Drawing.Point(386, 172);
-            this.IncorrectLabel.Name = "IncorrectLabel";
-            this.IncorrectLabel.Size = new System.Drawing.Size(148, 20);
-            this.IncorrectLabel.TabIndex = 40;
-            this.IncorrectLabel.Text = "Incorrect, try again";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -556,8 +556,8 @@
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1488, 754);
             this.Controls.Add(this.TopPanel);
-            this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.CreateAccPanel);
+            this.Controls.Add(this.LoginPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
