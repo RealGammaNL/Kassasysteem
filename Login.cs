@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Domain;
 
 namespace Kassasysteem
 {
@@ -109,12 +110,6 @@ namespace Kassasysteem
         {
             Hide();
             CashregisterForm.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            HelloDal dal = new HelloDal();
-            MessageBox.Show(dal.HelloDAL());
         }
     }
 }
