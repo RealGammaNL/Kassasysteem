@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -108,6 +109,12 @@ namespace Kassasysteem
         {
             Hide();
             CashregisterForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HelloDal dal = new HelloDal();
+            MessageBox.Show(dal.HelloDAL());
         }
     }
 }
