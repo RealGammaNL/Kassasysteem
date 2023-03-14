@@ -11,14 +11,8 @@ namespace Domain
     {
         public List<User> Managers { get; private set; } = new List<User>();
         public List<User> Employees { get; private set; } = new List<User>();
-        public Register() 
-        {
-            //User max = new User("Manager", "Max", "Brosky", "max@brosky.net", "123", new DateTime(2003, 03, 11, 12, 00, 00));
-            //AddUser(max);
-            //User sam = new User("Employee", "Sam", "Brosky", "sam@brosky.net", "321", new DateTime(2003, 03, 11, 12, 00, 00));
-            //AddUser(sam);
-
-        }
+        public Register() { }
+    
         public void AddUser(User user)
         {
             switch (user.SecurityLevel)
