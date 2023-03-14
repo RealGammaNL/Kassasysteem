@@ -8,6 +8,7 @@ namespace Domain
 {
     public class User
     {
+        public int Id;
         public string SecurityLevel { get; private set; }
         public string Firstname { get; private set; }
         public string Lastname { get; private set; }
@@ -17,6 +18,17 @@ namespace Domain
 
         public User(string securityLevel, string firstname, string lastname, string email, string password, DateTime birthdate)
         {
+            SecurityLevel = securityLevel; // Manager or Employee
+            Firstname = firstname;
+            Lastname = lastname;
+            Email = email;
+            Password = password;
+            Birthdate = birthdate;
+        }
+
+        public User(int id, string securityLevel, string firstname, string lastname, string email, string password, DateTime birthdate)
+        {
+            Id = id;
             SecurityLevel = securityLevel; // Manager or Employee
             Firstname = firstname;
             Lastname = lastname;

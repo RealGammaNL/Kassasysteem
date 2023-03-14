@@ -38,9 +38,9 @@ namespace Kassasysteem
             Hide();
             //LoginForm = loginForm;
             Register register = new Register();
-            User user = new User("Manager", "Cas", "Olischalger", "Jemoeder123@gmail.com", "Jemoeder123", DateTime.Now);
+            //User user = new User("Manager", "Cas", "Olischalger", "Jemoeder123@gmail.com", "Jemoeder123", DateTime.Now);
 
-            register.ChangeUser(user);
+            //register.ChangeUser(user);
         }
 
         private void panelInitializer()
@@ -262,6 +262,12 @@ namespace Kassasysteem
             form2.Location = new Point(0,0);
             form2.ShowDialog();
         }
+
+        private void Cashregister_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
 
         //protected override void OnLoad(EventArgs e)
         //{

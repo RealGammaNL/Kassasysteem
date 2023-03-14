@@ -53,7 +53,7 @@ namespace Kassasysteem
         public void CreateUser()
         {    
             DateTime Birthday = new DateTime(Int32.Parse(Yearbox.Text), Int32.Parse(Monthbox.Text), Int32.Parse(Daybox.Text), 12,00,00);
-            User user = new User(Securitybox.Text, Firstname_box.Text, Lastname_box.Text, Email_box.Text, Password_box.Text, Birthday);
+            User user = new User(1, Securitybox.Text, Firstname_box.Text, Lastname_box.Text, Email_box.Text, Password_box.Text, Birthday);
             Register.AddUser(user);
         }
 
@@ -105,11 +105,16 @@ namespace Kassasysteem
             }
         }
 
-
+    
         private void ToCashBtn_Click(object sender, EventArgs e)
         {
             Hide();
             CashregisterForm.Show();
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
