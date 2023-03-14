@@ -1,0 +1,253 @@
+[
+  {
+    "Category": "Zuivel",
+    "ProductName": "Melk",
+    "Price": 1.50
+  },
+  {
+    "Category": "Zuivel",
+    "ProductName": "Chocomel",
+    "Price": 2.50
+  },
+  {
+    "Category": "Zuivel",
+    "ProductName": "Crème Fraîche",
+    "Price": 2.90
+  },
+  {
+    "Category": "Zuivel",
+    "ProductName": "Karnemelk",
+    "Price": 2.70
+  },
+  {
+    "Category": "Zuivel",
+    "ProductName": "Kwark",
+    "Price": 3.30
+  },
+  {
+    "Category": "Zuivel",
+    "ProductName": "Yoghurt",
+    "Price": 3.20
+  },
+  {
+    "Category": "Zuivel",
+    "ProductName": "Vla",
+    "Price": 3.10
+  },
+  {
+    "Category": "Groente",
+    "ProductName": "Sla",
+    "Price": 2.40
+  },
+  {
+    "Category": "Groente",
+    "ProductName": "Tomaat",
+    "Price": 0.50
+  },
+  {
+    "Category": "Groente",
+    "ProductName": "Paprika",
+    "Price": 1.00
+  },
+  {
+    "Category": "Groente",
+    "ProductName": "400g Bonen",
+    "Price": 2.00
+  },
+  {
+    "Category": "Groente",
+    "ProductName": "200g Champignons",
+    "Price": 3.40
+  },
+  {
+    "Category": "Groente",
+    "ProductName": "Radijs",
+    "Price": 2.70
+  },
+  {
+    "Category": "Groente",
+    "ProductName": "1kg Aardappel",
+    "Price": 2.20
+  },
+
+  {
+    "Category": "Fruit",
+    "ProductName": "Appel",
+    "Price": 0.70
+  },
+  {
+    "Category": "Fruit",
+    "ProductName": "Peer",
+    "Price": 0.80
+  },
+  {
+    "Category": "Fruit",
+    "ProductName": "Banaan",
+    "Price": 2.30
+  },
+  {
+    "Category": "Fruit",
+    "ProductName": "300g Druiven",
+    "Price": 3.00
+  },
+  {
+    "Category": "Fruit",
+    "ProductName": "Manderijnen",
+    "Price": 3.00
+  },
+  {
+    "Category": "Fruit",
+    "ProductName": "Granaatappel",
+    "Price": 2.00
+  },
+  {
+    "Category": "Fruit",
+    "ProductName": "Necterine",
+    "Price": 2.30
+  },
+  {
+    "Category": "Vlees",
+    "ProductName": "Biefstuk",
+    "Price": 8.20
+  },
+  {
+    "Category": "Vlees",
+    "ProductName": "Ham",
+    "Price": 4.30
+  },
+  {
+    "Category": "Vlees",
+    "ProductName": "Kipfilet",
+    "Price": 4.20
+  },
+  {
+    "Category": "Vlees",
+    "ProductName": "Leverworst",
+    "Price": 2.30
+  },
+  {
+    "Category": "Vlees",
+    "ProductName": "Pate",
+    "Price": 3.40
+  },
+  {
+    "Category": "Vlees",
+    "ProductName": "Rundervink",
+    "Price": 3.30
+  },
+  {
+    "Category": "Vlees",
+    "ProductName": "Ossenhaas",
+    "Price": 4.50
+  },
+  {
+    "Category": "Kaas",
+    "ProductName": "Jong belegen kaas",
+    "Price": 4.30
+  },
+  {
+    "Category": "Kaas",
+    "ProductName": "Belegen kaas",
+    "Price": 3.70
+  },
+  {
+    "Category": "Kaas",
+    "ProductName": "Jonge kaas",
+    "Price": 6.20
+  },
+  {
+    "Category": "Kaas",
+    "ProductName": "Parmazaanse kaas",
+    "Price": 7.40
+  },
+  {
+    "Category": "Kaas",
+    "ProductName": "Oude kaas",
+    "Price": 5.30
+  },
+  {
+    "Category": "Kaas",
+    "ProductName": "Blauwe kaas",
+    "Price": 8.40
+  },
+  {
+    "Category": "Kaas",
+    "ProductName": "Brie",
+    "Price": 1.20
+  },
+  {
+    "Category": "Drank",
+    "ProductName": "Guinness",
+    "Price": 2.25
+  },
+  {
+    "Category": "Drank",
+    "ProductName": "Bacardi",
+    "Price": 16.00
+  },
+  {
+    "Category": "Drank",
+    "ProductName": "Malibu",
+    "Price": 12.30
+  },
+  {
+    "Category": "Drank",
+    "ProductName": "Pisang",
+    "Price": 15.75
+  },
+  {
+    "Category": "Drank",
+    "ProductName": "Limoncello",
+    "Price": 23.75
+  },
+  {
+    "Category": "Drank",
+    "ProductName": "Alfa Krat",
+    "Price": 10.00
+  },
+  {
+    "Category": "Drank",
+    "ProductName": "Cola",
+    "Price": 1.75
+  },
+  {
+    "Category": "Brood",
+    "ProductName": "Maanzaad Brood",
+    "Price": 4.75
+  },
+  {
+    "Category": "Brood",
+    "ProductName": "Roggen Brood",
+    "Price": 3.50
+  },
+  {
+    "Category": "Brood",
+    "ProductName": "Wit Brood",
+    "Price": 2.20
+  },
+  {
+    "Category": "Brood",
+    "ProductName": "Volkoren Brood",
+    "Price": 3.40
+  },
+  {
+    "Category": "Brood",
+    "ProductName": "Tijger Brood",
+    "Price": 2.70
+  },
+  {
+    "Category": "Brood",
+    "ProductName": "Tosti Brood",
+    "Price": 3.20
+  },
+  {
+    "Category": "Brood",
+    "ProductName": "Bruin Brood",
+    "Price": 1.75
+  },
+  {
+    "Category": "Kaas",
+    "ProductName": "Rode Kaas",
+    "Price": 7.30
+  }
+]
