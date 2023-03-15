@@ -12,13 +12,14 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using DAL;
 using Domain;
 
 namespace Kassasysteem
 {
     public partial class Cashregister : Form
     {
-        private List<Product> _products = new List<Product>();
+        public List<Product> Products = ProductDAL.GetProducts();
         Receipt Receipt = new Receipt();
         FlowLayoutPanel zuivelPanel = new FlowLayoutPanel();
         FlowLayoutPanel groentePanel = new FlowLayoutPanel();
@@ -33,7 +34,7 @@ namespace Kassasysteem
         public Cashregister()
         {
             InitializeComponent();// Form Login
-            LoadFromFile();
+            LoadFromDB();
             panelInitializer();
             Hide();
             //LoginForm = loginForm;
@@ -70,51 +71,17 @@ namespace Kassasysteem
             placeholderPanel.Controls.Add(broodPanel);
 
         }
-        private void LoadFromFile()
-        {
-            string json = System.IO.File.ReadAllText("Products.json");
-            _products = JsonSerializer.Deserialize<List<Product>>(json);
 
-            foreach (Product product in _products)
+        private void LoadFromDB()
+        {
+            foreach (Product product in Products)
             {
                 Button button = new Button();
-                button.Width = 100;
-                button.Height = 100;
+                button.Size = new Size(100, 100);
 
                 button.Name = product.ProductName;
                 button.Text = product.ProductName;
                 button.Click += buttonProduct_Click;
-
-                //if (product.Category == "Zuivel")
-                //{
-                //    zuivelPanel.Controls.Add(button);
-                //}
-                //else if (product.Category == "Groente")
-                //{
-                //    groentePanel.Controls.Add(button);
-                //}
-                //else if (product.Category == "Fruit")
-                //{
-                //    fruitPanel.Controls.Add(button);
-                //}
-                //else if (product.Category == "Vlees")
-                //{
-                //    vleesPanel.Controls.Add(button);
-                //}
-                //else if (product.Category == "Kaas")
-                //{
-                //    kaasPanel.Controls.Add(button);
-                //}
-                //else if (product.Category == "Drank")
-                //{
-                //    drankPanel.Controls.Add(button);
-                //}
-                //else if (product.Category == "Brood")
-                //{
-                //    broodPanel.Controls.Add(button);
-                //}
-
-                //Better version of the If/Else statement
 
                 switch (product.Category)
                 {
@@ -147,7 +114,7 @@ namespace Kassasysteem
         private void buttonProduct_Click(object sender, EventArgs e)
         {
             Button productButton = (Button)sender;
-            Product product = _products.Find(p => p.ProductName == productButton.Name);
+            Product product = Products.Find(p => p.ProductName == productButton.Name);
             if (productButton.Name == product.ProductName)
             {
                 Receipt.AddProduct(product);
@@ -208,7 +175,7 @@ namespace Kassasysteem
                     else if (Amount > 0)
                     {
 
-                        Product product = _products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
+                        Product product = Products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
                         Receipt.TotalPrice -= product.Price;
                         Amount--;
                         selectedItem.SubItems[1].Text = (Amount).ToString();
@@ -233,7 +200,7 @@ namespace Kassasysteem
                 ListViewItem selectedItem = listView1.SelectedItems[0];
                 if (selectedItem != null)
                 {
-                    Product product = _products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
+                    Product product = Products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
                     int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
 
                     Receipt.TotalPrice = Receipt.TotalPrice - (Amount * product.Price);
@@ -260,6 +227,7 @@ namespace Kassasysteem
             Form form2 = new Form();
             form2.Size = new Size(500, 700);
             form2.Location = new Point(0,0);
+            form2.FormClosed += Cashregister_FormClosed;
             form2.ShowDialog();
         }
 

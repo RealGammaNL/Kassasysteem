@@ -8,24 +8,14 @@ using System.Text.Json.Serialization;
 using DAL;
 using Domain;
 using Kassasysteem;
-
+using System.Diagnostics;
 
 namespace TestConsole
 {
-    internal class Program
+    internal class TestProgram
     {
         static void Main(string[] args)
         {
-            //List<Product> _products = new List<Product>();
-
-            //string json = System.IO.File.ReadAllText("Products.json");
-            //_products = JsonSerializer.Deserialize<List<Product>>(json);
-
-            //foreach (Product product in _products)
-            //{
-            //    Console.WriteLine(product.ProductName);
-            //    Console.ReadKey();
-            //}
 
             //User max = new User("Manager", "Max", "Brosky", "max@brosky.net", "123", new DateTime(2003, 03, 11, 12, 00, 00));
 
@@ -51,9 +41,33 @@ namespace TestConsole
             //    Console.WriteLine(user.Email);
             //    Console.WriteLine(user.Id);
             //}
+
+            // Vraag voor in de klass **************************************************************************
+
+            //User sam = new User("Employee", "Sam", "Brosky", "sam@brosky.net", "321", new DateTime(2003, 03, 11, 12, 00, 00));
+
+            //sam.ChangeUserAttribute("Birthdate", new DateTime(2001, 03, 11, 12, 00, 00));
+
+            //Console.WriteLine(sam.Birthdate);
+
+            //sam.SecurityLevel = "Manager";
+            //Console.WriteLine(sam.SecurityLevel);
+
+            // Vraag voor in de klass *************************************************************************
+
+            string str = "32 Max Baap";
+            string[] words = str.Split(' ');
+            int UserId = 0;
+            foreach (string word in words)
+            {
+                if (int.TryParse(word, out _))
+                {
+                    UserId = Int32.Parse(word);
+                    break;
+                }
+            }
+            Console.WriteLine(UserId);
             Console.ReadKey();
-
-
         }
     }
 }

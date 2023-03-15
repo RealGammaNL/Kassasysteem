@@ -30,7 +30,6 @@ namespace DAL
                 }
             }
             catch (SqlException ex) { throw ex;  }
-
         }
 
         public static void DeleteUser(User user)
@@ -57,11 +56,17 @@ namespace DAL
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
-                    string sql = "";
+                    string sql = "UPDATE Users SET SecurityLevel = @SecurityLevel, Firstname = @Firstname, Lastname = @Lastname, Email = @Email, Password = @Password, Birthdate = @Birthdate WHERE id = @Id";
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-
+                        command.Parameters.AddWithValue("@Id", user.Id);
+                        command.Parameters.AddWithValue("@SecurityLevel", user.SecurityLevel);
+                        command.Parameters.AddWithValue("@Firstname", user.Firstname);
+                        command.Parameters.AddWithValue("@Lastname", user.Lastname);
+                        command.Parameters.AddWithValue("@Email", user.Email);
+                        command.Parameters.AddWithValue("@Password", user.Password);
+                        command.Parameters.AddWithValue("@Birthdate", user.Birthdate);
                         command.ExecuteNonQuery();
                     }
                 }
