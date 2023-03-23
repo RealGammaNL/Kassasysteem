@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
+using System.Security.AccessControl;
+using System.Security.Policy;
 
 namespace Kassasysteem
 {
@@ -18,12 +20,13 @@ namespace Kassasysteem
         public List<User> Users = UserDAL.GetUsers();
         public Register Register = new Register();
         public Cashregister CashregisterForm = new Cashregister();
-
+        private static string selectedCategory;
 
         public Login()
         {
             InitializeComponent();
             InitializeControls();
+            fillProductGrid();
         }
 
 
@@ -33,6 +36,7 @@ namespace Kassasysteem
             CreateAccPanel.Hide();
             Manage_Panel.Hide();
             ManageAcc_Btn.Hide();
+            ManageProductsButton.Hide();
             FillPickUser_Box();
             ToCashBtn.Hide();
             CreateAccBtn.Hide();
@@ -52,13 +56,23 @@ namespace Kassasysteem
         {
             LoginPanel.Hide();
             Manage_Panel.Hide();
+            ManageProductsPanel.Hide();
             CreateAccPanel.Show();
+        }
+
+        private void ManageProductsButton_Click(object sender, EventArgs e)
+        {
+            LoginPanel.Hide();
+            Manage_Panel.Hide();
+            CreateAccPanel.Hide();
+            ManageProductsPanel.Show();
         }
 
         private void ManageAcc_Btn_Click(object sender, EventArgs e)
         {
             LoginPanel.Hide();
             CreateAccPanel.Hide();
+            ManageProductsPanel.Hide();
             Manage_Panel.Show();
         }
 
@@ -90,6 +104,7 @@ namespace Kassasysteem
                     ManageAcc_Btn.Show();
                     CreateAccBtn.Show();
                     ToCashBtn.Show();
+                    ManageProductsButton.Show();
                     found = true;
                     break;
                 }    
@@ -313,6 +328,61 @@ namespace Kassasysteem
             Year_Update_Box.ResetText();
             Month_Update_Box.ResetText();
             Day_Update_Box.ResetText();
+        }
+
+        private void SelectCategoryClick(object sender, EventArgs e)
+        {
+            Button categoryButton = (Button)sender;
+            selectedCategory = categoryButton.Text;
+            fillProductGrid();
+        }
+
+
+        private void fillProductGrid()
+        {
+            ProductGridView.Rows.Clear();
+            List<Product> products = ProductDAL.GetProducts();
+
+            foreach (Product product in products ) 
+            {
+                if (product.Category == selectedCategory)
+                {
+                    DataGridViewRow row = (DataGridViewRow)ProductGridView.Rows[0].Clone();
+                    row.Cells[0].Value = product.Id;
+                    row.Cells[1].Value = product.Category;
+                    row.Cells[2].Value = product.ProductName;
+                    row.Cells[3].Value = product.Price;
+                    ProductGridView.Rows.Add(row);
+                }
+            }
+        }
+
+        private void ProductUpdateButton_Click(object sender, EventArgs e)
+        {
+            UpdateProductButton.Visible = false;
+            UpdateProductConfirmButton.Visible = true;
+            UpdateProductLabel.Visible = true;
+
+        }
+        private void UpdateProductConfirmButton_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in ProductGridView.SelectedRows)
+            {
+                Product product = new Product((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, (double)row.Cells[3].Value);
+                ProductDAL.UpdateProduct(product);
+            }
+        }
+
+        private void deleteCustomerButton_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in viewCustomerGrid.SelectedRows)
+            {
+                Customer customer = new Customer((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, (string)row.Cells[3].Value, (string)row.Cells[4].Value, (bool)row.Cells[5].Value);
+                dal.deleteCustomerInDatabase(customer);
+                viewCustomerGrid.Rows.RemoveAt(row.Index);
+            }
+            refreshCustomerTable();
+
         }
     }
 }
