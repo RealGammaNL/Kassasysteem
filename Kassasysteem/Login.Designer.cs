@@ -95,6 +95,10 @@
             this.ConfirmDelete_Button = new System.Windows.Forms.Button();
             this.ManageProductsPanel = new System.Windows.Forms.Panel();
             this.ProductGridView = new System.Windows.Forms.DataGridView();
+            this.ID_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BroodButton = new System.Windows.Forms.Button();
             this.DrankButton = new System.Windows.Forms.Button();
             this.KaasButton = new System.Windows.Forms.Button();
@@ -107,14 +111,16 @@
             this.DeleteProductLabel = new System.Windows.Forms.Label();
             this.UpdateProductLabel = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.UpdateProductButton = new System.Windows.Forms.Button();
+            this.UpdateProductConfirmButton = new System.Windows.Forms.Button();
             this.DeleteProductConfirmButton = new System.Windows.Forms.Button();
             this.DeleteProductButton = new System.Windows.Forms.Button();
-            this.UpdateProductConfirmButton = new System.Windows.Forms.Button();
-            this.UpdateProductButton = new System.Windows.Forms.Button();
-            this.ID_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddProductLabel = new System.Windows.Forms.Label();
+            this.AddProductButton = new System.Windows.Forms.Button();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
+            this.ProductNameTextBox = new System.Windows.Forms.TextBox();
+            this.ProductNameLabel = new System.Windows.Forms.Label();
+            this.PriceLabel = new System.Windows.Forms.Label();
             this.CreateAccPanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
             this.LoginPanel.SuspendLayout();
@@ -1207,14 +1213,18 @@
             // ManageProductsPanel
             // 
             this.ManageProductsPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.ManageProductsPanel.Controls.Add(this.PriceLabel);
+            this.ManageProductsPanel.Controls.Add(this.ProductNameLabel);
+            this.ManageProductsPanel.Controls.Add(this.ProductNameTextBox);
+            this.ManageProductsPanel.Controls.Add(this.PriceTextBox);
+            this.ManageProductsPanel.Controls.Add(this.AddProductButton);
+            this.ManageProductsPanel.Controls.Add(this.AddProductLabel);
             this.ManageProductsPanel.Controls.Add(this.ProductGridView);
             this.ManageProductsPanel.Controls.Add(this.BroodButton);
             this.ManageProductsPanel.Controls.Add(this.DrankButton);
             this.ManageProductsPanel.Controls.Add(this.KaasButton);
             this.ManageProductsPanel.Controls.Add(this.VleesButton);
-            this.ManageProductsPanel.Controls.Add(this.UpdateProductButton);
             this.ManageProductsPanel.Controls.Add(this.FruitButton);
-            this.ManageProductsPanel.Controls.Add(this.UpdateProductConfirmButton);
             this.ManageProductsPanel.Controls.Add(this.GroenteButton);
             this.ManageProductsPanel.Controls.Add(this.ZuivelButton);
             this.ManageProductsPanel.Controls.Add(this.UpdateButtonConfirmLabel);
@@ -1222,8 +1232,10 @@
             this.ManageProductsPanel.Controls.Add(this.DeleteProductLabel);
             this.ManageProductsPanel.Controls.Add(this.UpdateProductLabel);
             this.ManageProductsPanel.Controls.Add(this.label20);
-            this.ManageProductsPanel.Controls.Add(this.DeleteProductConfirmButton);
+            this.ManageProductsPanel.Controls.Add(this.UpdateProductButton);
+            this.ManageProductsPanel.Controls.Add(this.UpdateProductConfirmButton);
             this.ManageProductsPanel.Controls.Add(this.DeleteProductButton);
+            this.ManageProductsPanel.Controls.Add(this.DeleteProductConfirmButton);
             this.ManageProductsPanel.Location = new System.Drawing.Point(200, 83);
             this.ManageProductsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ManageProductsPanel.Name = "ManageProductsPanel";
@@ -1240,12 +1252,42 @@
             this.ProductName,
             this.ProductPrice});
             this.ProductGridView.Location = new System.Drawing.Point(57, 162);
+            this.ProductGridView.MultiSelect = false;
             this.ProductGridView.Name = "ProductGridView";
             this.ProductGridView.RowHeadersVisible = false;
             this.ProductGridView.RowHeadersWidth = 51;
             this.ProductGridView.RowTemplate.Height = 24;
-            this.ProductGridView.Size = new System.Drawing.Size(981, 358);
+            this.ProductGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ProductGridView.Size = new System.Drawing.Size(981, 301);
             this.ProductGridView.TabIndex = 79;
+            // 
+            // ID_Column
+            // 
+            this.ID_Column.HeaderText = "ID";
+            this.ID_Column.MinimumWidth = 6;
+            this.ID_Column.Name = "ID_Column";
+            this.ID_Column.Width = 125;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.MinimumWidth = 6;
+            this.Category.Name = "Category";
+            this.Category.Width = 125;
+            // 
+            // ProductName
+            // 
+            this.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.HeaderText = "Price";
+            this.ProductPrice.MinimumWidth = 6;
+            this.ProductPrice.Name = "ProductPrice";
+            this.ProductPrice.Width = 125;
             // 
             // BroodButton
             // 
@@ -1328,7 +1370,7 @@
             // 
             this.UpdateButtonConfirmLabel.AutoSize = true;
             this.UpdateButtonConfirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateButtonConfirmLabel.Location = new System.Drawing.Point(371, 561);
+            this.UpdateButtonConfirmLabel.Location = new System.Drawing.Point(343, 501);
             this.UpdateButtonConfirmLabel.Name = "UpdateButtonConfirmLabel";
             this.UpdateButtonConfirmLabel.Size = new System.Drawing.Size(351, 20);
             this.UpdateButtonConfirmLabel.TabIndex = 71;
@@ -1339,7 +1381,7 @@
             // 
             this.DeleteButtonConfirmLabel.AutoSize = true;
             this.DeleteButtonConfirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteButtonConfirmLabel.Location = new System.Drawing.Point(372, 614);
+            this.DeleteButtonConfirmLabel.Location = new System.Drawing.Point(344, 554);
             this.DeleteButtonConfirmLabel.Name = "DeleteButtonConfirmLabel";
             this.DeleteButtonConfirmLabel.Size = new System.Drawing.Size(346, 20);
             this.DeleteButtonConfirmLabel.TabIndex = 70;
@@ -1350,7 +1392,7 @@
             // 
             this.DeleteProductLabel.AutoSize = true;
             this.DeleteProductLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteProductLabel.Location = new System.Drawing.Point(47, 614);
+            this.DeleteProductLabel.Location = new System.Drawing.Point(58, 552);
             this.DeleteProductLabel.Name = "DeleteProductLabel";
             this.DeleteProductLabel.Size = new System.Drawing.Size(119, 20);
             this.DeleteProductLabel.TabIndex = 67;
@@ -1360,7 +1402,7 @@
             // 
             this.UpdateProductLabel.AutoSize = true;
             this.UpdateProductLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateProductLabel.Location = new System.Drawing.Point(47, 560);
+            this.UpdateProductLabel.Location = new System.Drawing.Point(58, 498);
             this.UpdateProductLabel.Name = "UpdateProductLabel";
             this.UpdateProductLabel.Size = new System.Drawing.Size(123, 20);
             this.UpdateProductLabel.TabIndex = 65;
@@ -1376,76 +1418,110 @@
             this.label20.TabIndex = 26;
             this.label20.Text = "Manage Products";
             // 
-            // DeleteProductConfirmButton
-            // 
-            this.DeleteProductConfirmButton.Location = new System.Drawing.Point(207, 602);
-            this.DeleteProductConfirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DeleteProductConfirmButton.Name = "DeleteProductConfirmButton";
-            this.DeleteProductConfirmButton.Size = new System.Drawing.Size(159, 48);
-            this.DeleteProductConfirmButton.TabIndex = 68;
-            this.DeleteProductConfirmButton.Text = "Confirm";
-            this.DeleteProductConfirmButton.UseVisualStyleBackColor = true;
-            this.DeleteProductConfirmButton.Visible = false;
-            // 
-            // DeleteProductButton
-            // 
-            this.DeleteProductButton.Location = new System.Drawing.Point(208, 602);
-            this.DeleteProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DeleteProductButton.Name = "DeleteProductButton";
-            this.DeleteProductButton.Size = new System.Drawing.Size(159, 48);
-            this.DeleteProductButton.TabIndex = 66;
-            this.DeleteProductButton.Text = "Delete";
-            this.DeleteProductButton.UseVisualStyleBackColor = true;
-            // 
-            // UpdateProductConfirmButton
-            // 
-            this.UpdateProductConfirmButton.Location = new System.Drawing.Point(206, 545);
-            this.UpdateProductConfirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.UpdateProductConfirmButton.Name = "UpdateProductConfirmButton";
-            this.UpdateProductConfirmButton.Size = new System.Drawing.Size(159, 48);
-            this.UpdateProductConfirmButton.TabIndex = 69;
-            this.UpdateProductConfirmButton.Text = "Confirm";
-            this.UpdateProductConfirmButton.UseVisualStyleBackColor = true;
-            this.UpdateProductConfirmButton.Visible = false;
-            this.UpdateProductConfirmButton.Click += new System.EventHandler(this.ProductUpdateButton_Click);
-            // 
             // UpdateProductButton
             // 
-            this.UpdateProductButton.Location = new System.Drawing.Point(206, 545);
+            this.UpdateProductButton.Location = new System.Drawing.Point(198, 483);
             this.UpdateProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UpdateProductButton.Name = "UpdateProductButton";
-            this.UpdateProductButton.Size = new System.Drawing.Size(159, 48);
+            this.UpdateProductButton.Size = new System.Drawing.Size(133, 48);
             this.UpdateProductButton.TabIndex = 64;
             this.UpdateProductButton.Text = "Update";
             this.UpdateProductButton.UseVisualStyleBackColor = true;
             this.UpdateProductButton.Click += new System.EventHandler(this.ProductUpdateButton_Click);
             // 
-            // ID_Column
+            // UpdateProductConfirmButton
             // 
-            this.ID_Column.HeaderText = "ID";
-            this.ID_Column.MinimumWidth = 6;
-            this.ID_Column.Name = "ID_Column";
-            this.ID_Column.Width = 125;
+            this.UpdateProductConfirmButton.Location = new System.Drawing.Point(198, 483);
+            this.UpdateProductConfirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UpdateProductConfirmButton.Name = "UpdateProductConfirmButton";
+            this.UpdateProductConfirmButton.Size = new System.Drawing.Size(133, 48);
+            this.UpdateProductConfirmButton.TabIndex = 69;
+            this.UpdateProductConfirmButton.Text = "Confirm";
+            this.UpdateProductConfirmButton.UseVisualStyleBackColor = true;
+            this.UpdateProductConfirmButton.Visible = false;
+            this.UpdateProductConfirmButton.Click += new System.EventHandler(this.UpdateProductConfirmButton_Click);
             // 
-            // Category
+            // DeleteProductConfirmButton
             // 
-            this.Category.HeaderText = "Category";
-            this.Category.MinimumWidth = 6;
-            this.Category.Name = "Category";
+            this.DeleteProductConfirmButton.Location = new System.Drawing.Point(197, 540);
+            this.DeleteProductConfirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteProductConfirmButton.Name = "DeleteProductConfirmButton";
+            this.DeleteProductConfirmButton.Size = new System.Drawing.Size(133, 48);
+            this.DeleteProductConfirmButton.TabIndex = 68;
+            this.DeleteProductConfirmButton.Text = "Confirm";
+            this.DeleteProductConfirmButton.UseVisualStyleBackColor = true;
+            this.DeleteProductConfirmButton.Visible = false;
+            this.DeleteProductConfirmButton.Click += new System.EventHandler(this.DeleteProductConfirmButton_Click);
             // 
-            // ProductName
+            // DeleteProductButton
             // 
-            this.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.MinimumWidth = 6;
-            this.ProductName.Name = "ProductName";
+            this.DeleteProductButton.Location = new System.Drawing.Point(198, 540);
+            this.DeleteProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteProductButton.Name = "DeleteProductButton";
+            this.DeleteProductButton.Size = new System.Drawing.Size(133, 48);
+            this.DeleteProductButton.TabIndex = 66;
+            this.DeleteProductButton.Text = "Delete";
+            this.DeleteProductButton.UseVisualStyleBackColor = true;
+            this.DeleteProductButton.Click += new System.EventHandler(this.ProductDeleteButton_Click);
             // 
-            // ProductPrice
+            // AddProductLabel
             // 
-            this.ProductPrice.HeaderText = "Price";
-            this.ProductPrice.MinimumWidth = 6;
-            this.ProductPrice.Name = "ProductPrice";
-            this.ProductPrice.Width = 125;
+            this.AddProductLabel.AutoSize = true;
+            this.AddProductLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddProductLabel.Location = new System.Drawing.Point(58, 613);
+            this.AddProductLabel.Name = "AddProductLabel";
+            this.AddProductLabel.Size = new System.Drawing.Size(101, 20);
+            this.AddProductLabel.TabIndex = 80;
+            this.AddProductLabel.Text = "Add Product";
+            // 
+            // AddProductButton
+            // 
+            this.AddProductButton.Location = new System.Drawing.Point(198, 595);
+            this.AddProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddProductButton.Name = "AddProductButton";
+            this.AddProductButton.Size = new System.Drawing.Size(133, 55);
+            this.AddProductButton.TabIndex = 81;
+            this.AddProductButton.Text = "Add";
+            this.AddProductButton.UseVisualStyleBackColor = true;
+            this.AddProductButton.Click += new System.EventHandler(this.AddProductButton_Click);
+            // 
+            // PriceTextBox
+            // 
+            this.PriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceTextBox.Location = new System.Drawing.Point(481, 624);
+            this.PriceTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.Size = new System.Drawing.Size(416, 27);
+            this.PriceTextBox.TabIndex = 82;
+            // 
+            // ProductNameTextBox
+            // 
+            this.ProductNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductNameTextBox.Location = new System.Drawing.Point(481, 593);
+            this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ProductNameTextBox.Name = "ProductNameTextBox";
+            this.ProductNameTextBox.Size = new System.Drawing.Size(416, 27);
+            this.ProductNameTextBox.TabIndex = 83;
+            // 
+            // ProductNameLabel
+            // 
+            this.ProductNameLabel.AutoSize = true;
+            this.ProductNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductNameLabel.Location = new System.Drawing.Point(344, 596);
+            this.ProductNameLabel.Name = "ProductNameLabel";
+            this.ProductNameLabel.Size = new System.Drawing.Size(121, 20);
+            this.ProductNameLabel.TabIndex = 84;
+            this.ProductNameLabel.Text = "Product Name:";
+            // 
+            // PriceLabel
+            // 
+            this.PriceLabel.AutoSize = true;
+            this.PriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceLabel.Location = new System.Drawing.Point(346, 627);
+            this.PriceLabel.Name = "PriceLabel";
+            this.PriceLabel.Size = new System.Drawing.Size(53, 20);
+            this.PriceLabel.TabIndex = 85;
+            this.PriceLabel.Text = "Price:";
             // 
             // Login
             // 
@@ -1567,5 +1643,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductPrice;
+        private System.Windows.Forms.Label PriceLabel;
+        private System.Windows.Forms.Label ProductNameLabel;
+        private System.Windows.Forms.TextBox ProductNameTextBox;
+        private System.Windows.Forms.TextBox PriceTextBox;
+        private System.Windows.Forms.Button AddProductButton;
+        private System.Windows.Forms.Label AddProductLabel;
     }
 }

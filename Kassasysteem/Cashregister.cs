@@ -17,7 +17,7 @@ namespace Kassasysteem
 {
     public partial class Cashregister : Form
     {
-        public List<Product> Products = ProductDAL.GetProducts();
+        
         Receipt Receipt = new Receipt();
         FlowLayoutPanel zuivelPanel = new FlowLayoutPanel();
         FlowLayoutPanel groentePanel = new FlowLayoutPanel();
@@ -35,6 +35,8 @@ namespace Kassasysteem
             LoadFromDB();
             panelInitializer();
             Hide();
+
+        
             //LoginForm = loginForm;
             Register register = new Register();
             //User user = new User("Manager", "Cas", "Olischalger", "Jemoeder123@gmail.com", "Jemoeder123", DateTime.Now);
@@ -42,7 +44,7 @@ namespace Kassasysteem
             //register.ChangeUser(user);
         }
 
-        private void panelInitializer()
+        public void panelInitializer()
         {
             zuivelPanel.Size = placeholderPanel.Size;
             zuivelPanel.Name = "Zuivel";
@@ -70,8 +72,9 @@ namespace Kassasysteem
 
         }
 
-        private void LoadFromDB()
+        public void LoadFromDB()
         {
+            List<Product> Products = ProductDAL.GetProducts();
             foreach (Product product in Products)
             {
                 Button button = new Button();
@@ -111,6 +114,7 @@ namespace Kassasysteem
         }
         private void buttonProduct_Click(object sender, EventArgs e)
         {
+            List<Product> Products = ProductDAL.GetProducts();
             Button productButton = (Button)sender;
             Product product = Products.Find(p => p.ProductName == productButton.Name);
             if (productButton.Name == product.ProductName)
@@ -160,6 +164,7 @@ namespace Kassasysteem
 
         private void DelProdButton_Click(object sender, EventArgs e)
         {
+            List<Product> Products = ProductDAL.GetProducts();
             if (listView1.SelectedItems.Count != 0)
             {
                 ListViewItem selectedItem = listView1.SelectedItems[0];
@@ -193,6 +198,7 @@ namespace Kassasysteem
 
         private void DelLineButton_Click(object sender, EventArgs e)
         {
+            List<Product> Products = ProductDAL.GetProducts();
             if (listView1.SelectedItems.Count != 0)
             {
                 ListViewItem selectedItem = listView1.SelectedItems[0];
@@ -220,13 +226,19 @@ namespace Kassasysteem
 
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-            Form form1 = this;
-            form1.Hide();
-            Form form2 = new Form();
-            form2.Size = new Size(500, 700);
-            form2.Location = new Point(0,0);
-            form2.FormClosed += Cashregister_FormClosed;
-            form2.ShowDialog();
+            Hide();
+            Form CheckoutForm = new Form();
+            CheckoutForm.Size = new Size(500, 700);
+            CheckoutForm.Location = new Point(0,0);
+            CheckoutForm.FormClosed += Cashregister_FormClosed;
+            CheckoutForm.ShowDialog();
+
+            foreach (Product product in Receipt.Products)
+            {
+                product.Stock -= 1;
+                ProductDAL.UpdateStock(product);
+                // ProductDAL count uit database uitlezen etc.
+            }
         }
 
         private void Cashregister_FormClosed(object sender, FormClosedEventArgs e)

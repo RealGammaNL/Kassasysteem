@@ -19,14 +19,12 @@ namespace Kassasysteem
     {
         public List<User> Users = UserDAL.GetUsers();
         public Register Register = new Register();
-        public Cashregister CashregisterForm = new Cashregister();
         private static string selectedCategory;
 
         public Login()
         {
             InitializeComponent();
             InitializeControls();
-            fillProductGrid();
         }
 
 
@@ -114,6 +112,7 @@ namespace Kassasysteem
                     LoginPanel.Hide();
                     found = true;
                     Hide();
+                    Cashregister CashregisterForm = new Cashregister();
                     CashregisterForm.Show();
                     break;
                 }
@@ -130,6 +129,7 @@ namespace Kassasysteem
         private void ToCashBtn_Click(object sender, EventArgs e)
         {
             Hide();
+            Cashregister CashregisterForm = new Cashregister();
             CashregisterForm.Show();
         }
 
@@ -359,9 +359,9 @@ namespace Kassasysteem
 
         private void ProductUpdateButton_Click(object sender, EventArgs e)
         {
-            UpdateProductButton.Visible = false;
-            UpdateProductConfirmButton.Visible = true;
-            UpdateProductLabel.Visible = true;
+            UpdateProductButton.Hide();
+            UpdateProductConfirmButton.Show();
+            UpdateButtonConfirmLabel.Show();
 
         }
         private void UpdateProductConfirmButton_Click(object sender, EventArgs e)
@@ -371,18 +371,38 @@ namespace Kassasysteem
                 Product product = new Product((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, (double)row.Cells[3].Value);
                 ProductDAL.UpdateProduct(product);
             }
+            UpdateProductButton.Show();
+            UpdateProductConfirmButton.Hide();
+            UpdateButtonConfirmLabel.Hide();
         }
 
-        private void deleteCustomerButton_Click(object sender, EventArgs e)
+        private void ProductDeleteButton_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in viewCustomerGrid.SelectedRows)
-            {
-                Customer customer = new Customer((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, (string)row.Cells[3].Value, (string)row.Cells[4].Value, (bool)row.Cells[5].Value);
-                dal.deleteCustomerInDatabase(customer);
-                viewCustomerGrid.Rows.RemoveAt(row.Index);
-            }
-            refreshCustomerTable();
+            DeleteProductButton.Hide();
+            DeleteProductConfirmButton.Show();
+            DeleteButtonConfirmLabel.Show();
 
+        }
+        private void DeleteProductConfirmButton_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in ProductGridView.SelectedRows)
+            {
+                Product product = new Product((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, (double)row.Cells[3].Value);
+                ProductDAL.DeleteProduct(product);
+                ProductGridView.Rows.RemoveAt(row.Index);
+            }
+            DeleteProductButton.Show();
+            DeleteProductConfirmButton.Hide();
+            DeleteButtonConfirmLabel.Hide();
+        }
+
+        private void AddProductButton_Click(object sender, EventArgs e)
+        {
+            Product product = new Product(selectedCategory, ProductNameTextBox.Text, double.Parse(PriceTextBox.Text));
+            ProductDAL.AddProduct(product);
+            fillProductGrid();
+            ProductNameTextBox.Clear();
+            PriceTextBox.Clear();
         }
     }
 }

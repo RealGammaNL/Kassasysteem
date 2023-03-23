@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using DAL;
 using Domain;
 using Kassasysteem;
@@ -55,18 +53,30 @@ namespace TestConsole
 
             // Vraag voor in de klass *************************************************************************
 
-            string str = "32 Max Baap";
-            string[] words = str.Split(' ');
-            int UserId = 0;
-            foreach (string word in words)
+            //string str = "32 Max Baap";
+            //string[] words = str.Split(' ');
+            //int UserId = 0;
+            //foreach (string word in words)
+            //{
+            //    if (int.TryParse(word, out _))
+            //    {
+            //        UserId = Int32.Parse(word);
+            //        break;
+            //    }
+            //}
+            //Console.WriteLine(UserId);
+            //Console.ReadKey();
+
+
+
+
+            List<Product> products = ProductDAL.GetProducts();
+            int count = 100;
+            foreach (Product product in products)
             {
-                if (int.TryParse(word, out _))
-                {
-                    UserId = Int32.Parse(word);
-                    break;
-                }
+                product.Stock = count;
+                ProductDAL.UpdateStock(product);
             }
-            Console.WriteLine(UserId);
             Console.ReadKey();
         }
     }

@@ -14,7 +14,7 @@ namespace Domain
         
         public int ProductCount(Product product)
         {
-            return numProducts = Products.Count(s => s == product);
+            return numProducts = Products.Count(s => s.Id == product.Id);
         }
 
         public void AddProduct(Product product)

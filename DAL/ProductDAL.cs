@@ -54,7 +54,7 @@ namespace DAL
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
-                    string sql = "UPDATE Products SET Category = @Category, ProductName = @ProductName, Price = @Price WHERE ID = @Id";
+                    string sql = "UPDATE Products SET Category = @Category, ProductName = @ProductName, Price = @Price, Count = @Count WHERE ID = @Id";
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -62,7 +62,6 @@ namespace DAL
                         command.Parameters.AddWithValue("@Category", product.Category);
                         command.Parameters.AddWithValue("@Productname", product.ProductName);
                         command.Parameters.AddWithValue("@Price", product.Price);
-
                         command.ExecuteNonQuery();
                     }
                 }
@@ -90,12 +89,32 @@ namespace DAL
                                                     , reader["Category"].ToString()
                                                     , reader["ProductName"].ToString()
                                                     , (double)reader["Price"]
+                                                    , (int)reader["Stock"]
                                                     ));
                             }
                         }
                     }
                 }
                 return products;
+            }
+            catch (SqlException ex) { throw ex; }
+        }
+
+        public static void UpdateStock(Product product)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    string sql = "UPDATE Products SET Stock = @Stock WHERE ID = @Id";
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", product.Id);
+                        command.Parameters.AddWithValue("@Stock", product.Stock);
+                        command.ExecuteNonQuery();
+                    }
+                }
             }
             catch (SqlException ex) { throw ex; }
         }
