@@ -9,12 +9,11 @@ namespace Domain
     public class Receipt
     {
         public List<Product> Products { get; private set; } = new List<Product>();
-        private int numProducts = 0;
         public double TotalPrice { get; set; } = 0.00;
         
         public int ProductCount(Product product)
         {
-            return numProducts = Products.Count(s => s.Id == product.Id);
+            return Products.Count(s => s.Id == product.Id);
         }
 
         public void AddProduct(Product product)

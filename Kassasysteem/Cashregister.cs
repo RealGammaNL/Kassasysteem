@@ -35,13 +35,6 @@ namespace Kassasysteem
             LoadFromDB();
             panelInitializer();
             Hide();
-
-        
-            //LoginForm = loginForm;
-            Register register = new Register();
-            //User user = new User("Manager", "Cas", "Olischalger", "Jemoeder123@gmail.com", "Jemoeder123", DateTime.Now);
-
-            //register.ChangeUser(user);
         }
 
         public void panelInitializer()
@@ -235,9 +228,9 @@ namespace Kassasysteem
 
             foreach (Product product in Receipt.Products)
             {
-                product.Stock -= 1;
+                int StockAmount = ProductDAL.GetStockAmount(product);
+                product.Stock = StockAmount - 1;
                 ProductDAL.UpdateStock(product);
-                // ProductDAL count uit database uitlezen etc.
             }
         }
 
@@ -245,13 +238,5 @@ namespace Kassasysteem
         {
             Application.Exit();
         }
-
-
-        //protected override void OnLoad(EventArgs e)
-        //{
-        //    Visible = false;
-        //    ShowInTaskbar = false;
-        //    base.OnLoad(e);
-        //}
     }
 }

@@ -18,7 +18,6 @@ namespace Kassasysteem
     public partial class Login : Form
     {
         public List<User> Users = UserDAL.GetUsers();
-        public Register Register = new Register();
         private static string selectedCategory;
 
         public Login()
@@ -368,7 +367,7 @@ namespace Kassasysteem
         {
             foreach (DataGridViewRow row in ProductGridView.SelectedRows)
             {
-                Product product = new Product((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, (double)row.Cells[3].Value);
+                Product product = new Product((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, double.Parse((string)row.Cells[3].Value));
                 ProductDAL.UpdateProduct(product);
             }
             UpdateProductButton.Show();
@@ -387,7 +386,7 @@ namespace Kassasysteem
         {
             foreach (DataGridViewRow row in ProductGridView.SelectedRows)
             {
-                Product product = new Product((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, (double)row.Cells[3].Value);
+                Product product = new Product((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, double.Parse((string)row.Cells[3].Value));
                 ProductDAL.DeleteProduct(product);
                 ProductGridView.Rows.RemoveAt(row.Index);
             }

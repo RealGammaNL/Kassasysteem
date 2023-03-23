@@ -1,5 +1,6 @@
 ﻿using Domain;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -9,6 +10,7 @@ namespace DAL
 {
     static public class ProductDAL
     {
+        private static int StockAmount;
         private static string ConnectionString = "Data Source=LAPTOP-MDHQ0DL3;Initial Catalog = KassasysteemDB; Persist Security Info=True;User ID = sa; Password=123max";
         public static void AddProduct(Product product)
         {
@@ -16,13 +18,14 @@ namespace DAL
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
-                    string sql = "INSERT INTO Products (Category, ProductName, Price) VALUES (@Category, @ProductName, @Price)";
+                    string sql = "INSERT INTO Products (Category, ProductName, Price, Stock) VALUES (@Category, @ProductName, @Price, @Stock)";
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@Category", product.Category);
                         command.Parameters.AddWithValue("@ProductName", product.ProductName);
                         command.Parameters.AddWithValue("@Price", product.Price);
+                        command.Parameters.AddWithValue("@Stock", 100); // Default amount of stock for an item.
                         command.ExecuteNonQuery();
                     }
                 }
@@ -54,7 +57,7 @@ namespace DAL
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
-                    string sql = "UPDATE Products SET Category = @Category, ProductName = @ProductName, Price = @Price, Count = @Count WHERE ID = @Id";
+                    string sql = "UPDATE Products SET Category = @Category, ProductName = @ProductName, Price = @Price WHERE ID = @Id";
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -114,6 +117,33 @@ namespace DAL
                         command.Parameters.AddWithValue("@Stock", product.Stock);
                         command.ExecuteNonQuery();
                     }
+                }
+            }
+            catch (SqlException ex) { throw ex; }
+        }
+
+        public static int GetStockAmount(Product product)
+        {
+            List<Product> products = new List<Product>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    string sql = "SELECT Stock FROM Products Where Id = @Id";
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", product.Id);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                StockAmount = (int)reader["Stock"];
+                            }
+                        }
+                    }
+                    return StockAmount;
                 }
             }
             catch (SqlException ex) { throw ex; }
