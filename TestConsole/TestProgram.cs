@@ -80,19 +80,19 @@ namespace TestConsole
             //Console.ReadKey();
 
             //Test 
-            List<string> strings = new List<string>();
-            strings.Add("1");
-            strings.Add("2");   
-            strings.Add("3");   
-            strings.Add("4");
+            //List<string> strings = new List<string>();
+            //strings.Add("1");
+            //strings.Add("2");   
+            //strings.Add("3");   
+            //strings.Add("4");
 
-            strings.Remove("2");
+            //strings.Remove("2");
 
-            foreach (string s in strings)
-            {
-                Console.WriteLine(s);
-            }
-            Console.ReadKey();
+            //foreach (string s in strings)
+            //{
+            //    Console.WriteLine(s);
+            //}
+            //Console.ReadKey();
 
         }
     }
