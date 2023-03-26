@@ -55,7 +55,7 @@
             this.OrderLabel = new System.Windows.Forms.Label();
             this.PriceTotal = new System.Windows.Forms.Label();
             this.TotalPriceLabel = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listview1 = new System.Windows.Forms.ListView();
             this.Product = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -340,21 +340,21 @@
             this.TotalPriceLabel.TabIndex = 78;
             this.TotalPriceLabel.Text = "Total Price";
             // 
-            // listView1
+            // listview1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listview1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Product,
             this.Amount,
             this.Price});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 31);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(332, 241);
-            this.listView1.TabIndex = 79;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listview1.FullRowSelect = true;
+            this.listview1.GridLines = true;
+            this.listview1.HideSelection = false;
+            this.listview1.Location = new System.Drawing.Point(6, 31);
+            this.listview1.Name = "listview1";
+            this.listview1.Size = new System.Drawing.Size(332, 241);
+            this.listview1.TabIndex = 79;
+            this.listview1.UseCompatibleStateImageBehavior = false;
+            this.listview1.View = System.Windows.Forms.View.Details;
             // 
             // Product
             // 
@@ -378,7 +378,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1116, 613);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listview1);
             this.Controls.Add(this.TotalPriceLabel);
             this.Controls.Add(this.PriceTotal);
             this.Controls.Add(this.OrderLabel);
@@ -444,7 +444,7 @@
         private System.Windows.Forms.Label OrderLabel;
         private System.Windows.Forms.Label PriceTotal;
         private System.Windows.Forms.Label TotalPriceLabel;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listview1;
         private System.Windows.Forms.ColumnHeader Product;
         private System.Windows.Forms.ColumnHeader Amount;
         private System.Windows.Forms.ColumnHeader Price;
