@@ -53,12 +53,6 @@
             this.ToCashBtn = new System.Windows.Forms.Button();
             this.ManageAcc_Btn = new System.Windows.Forms.Button();
             this.LoginPanel = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.IncorrectLabel = new System.Windows.Forms.Label();
             this.SignInButton = new System.Windows.Forms.Button();
             this.LoginPassword_Label = new System.Windows.Forms.Label();
@@ -94,6 +88,12 @@
             this.UpdateConfirm_Button = new System.Windows.Forms.Button();
             this.ConfirmDelete_Button = new System.Windows.Forms.Button();
             this.ManageProductsPanel = new System.Windows.Forms.Panel();
+            this.PriceLabel = new System.Windows.Forms.Label();
+            this.ProductNameLabel = new System.Windows.Forms.Label();
+            this.ProductNameTextBox = new System.Windows.Forms.TextBox();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
+            this.AddProductButton = new System.Windows.Forms.Button();
+            this.AddProductLabel = new System.Windows.Forms.Label();
             this.ProductGridView = new System.Windows.Forms.DataGridView();
             this.ID_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,14 +113,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.UpdateProductButton = new System.Windows.Forms.Button();
             this.UpdateProductConfirmButton = new System.Windows.Forms.Button();
-            this.DeleteProductConfirmButton = new System.Windows.Forms.Button();
             this.DeleteProductButton = new System.Windows.Forms.Button();
-            this.AddProductLabel = new System.Windows.Forms.Label();
-            this.AddProductButton = new System.Windows.Forms.Button();
-            this.PriceTextBox = new System.Windows.Forms.TextBox();
-            this.ProductNameTextBox = new System.Windows.Forms.TextBox();
-            this.ProductNameLabel = new System.Windows.Forms.Label();
-            this.PriceLabel = new System.Windows.Forms.Label();
+            this.DeleteProductConfirmButton = new System.Windows.Forms.Button();
             this.CreateAccPanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
             this.LoginPanel.SuspendLayout();
@@ -573,12 +567,6 @@
             // LoginPanel
             // 
             this.LoginPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.LoginPanel.Controls.Add(this.label5);
-            this.LoginPanel.Controls.Add(this.label6);
-            this.LoginPanel.Controls.Add(this.label7);
-            this.LoginPanel.Controls.Add(this.label4);
-            this.LoginPanel.Controls.Add(this.label3);
-            this.LoginPanel.Controls.Add(this.label2);
             this.LoginPanel.Controls.Add(this.IncorrectLabel);
             this.LoginPanel.Controls.Add(this.SignInButton);
             this.LoginPanel.Controls.Add(this.LoginPassword_Label);
@@ -592,72 +580,6 @@
             this.LoginPanel.Size = new System.Drawing.Size(1093, 676);
             this.LoginPanel.TabIndex = 41;
             this.LoginPanel.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(403, 576);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(194, 20);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "Example employee login:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(403, 629);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 20);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "321";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(403, 602);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 20);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "sam@brosky.net";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(173, 575);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 20);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "Example manager login:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(173, 626);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 20);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "123";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(175, 602);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 20);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "max@brosky.net";
             // 
             // IncorrectLabel
             // 
@@ -1243,6 +1165,65 @@
             this.ManageProductsPanel.TabIndex = 72;
             this.ManageProductsPanel.Visible = false;
             // 
+            // PriceLabel
+            // 
+            this.PriceLabel.AutoSize = true;
+            this.PriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceLabel.Location = new System.Drawing.Point(346, 627);
+            this.PriceLabel.Name = "PriceLabel";
+            this.PriceLabel.Size = new System.Drawing.Size(53, 20);
+            this.PriceLabel.TabIndex = 85;
+            this.PriceLabel.Text = "Price:";
+            // 
+            // ProductNameLabel
+            // 
+            this.ProductNameLabel.AutoSize = true;
+            this.ProductNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductNameLabel.Location = new System.Drawing.Point(344, 596);
+            this.ProductNameLabel.Name = "ProductNameLabel";
+            this.ProductNameLabel.Size = new System.Drawing.Size(121, 20);
+            this.ProductNameLabel.TabIndex = 84;
+            this.ProductNameLabel.Text = "Product Name:";
+            // 
+            // ProductNameTextBox
+            // 
+            this.ProductNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductNameTextBox.Location = new System.Drawing.Point(481, 593);
+            this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ProductNameTextBox.Name = "ProductNameTextBox";
+            this.ProductNameTextBox.Size = new System.Drawing.Size(416, 27);
+            this.ProductNameTextBox.TabIndex = 83;
+            // 
+            // PriceTextBox
+            // 
+            this.PriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceTextBox.Location = new System.Drawing.Point(481, 624);
+            this.PriceTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.Size = new System.Drawing.Size(416, 27);
+            this.PriceTextBox.TabIndex = 82;
+            // 
+            // AddProductButton
+            // 
+            this.AddProductButton.Location = new System.Drawing.Point(198, 595);
+            this.AddProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddProductButton.Name = "AddProductButton";
+            this.AddProductButton.Size = new System.Drawing.Size(133, 55);
+            this.AddProductButton.TabIndex = 81;
+            this.AddProductButton.Text = "Add";
+            this.AddProductButton.UseVisualStyleBackColor = true;
+            this.AddProductButton.Click += new System.EventHandler(this.AddProductButton_Click);
+            // 
+            // AddProductLabel
+            // 
+            this.AddProductLabel.AutoSize = true;
+            this.AddProductLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddProductLabel.Location = new System.Drawing.Point(58, 613);
+            this.AddProductLabel.Name = "AddProductLabel";
+            this.AddProductLabel.Size = new System.Drawing.Size(101, 20);
+            this.AddProductLabel.TabIndex = 80;
+            this.AddProductLabel.Text = "Add Product";
+            // 
             // ProductGridView
             // 
             this.ProductGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1441,6 +1422,17 @@
             this.UpdateProductConfirmButton.Visible = false;
             this.UpdateProductConfirmButton.Click += new System.EventHandler(this.UpdateProductConfirmButton_Click);
             // 
+            // DeleteProductButton
+            // 
+            this.DeleteProductButton.Location = new System.Drawing.Point(198, 540);
+            this.DeleteProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteProductButton.Name = "DeleteProductButton";
+            this.DeleteProductButton.Size = new System.Drawing.Size(133, 48);
+            this.DeleteProductButton.TabIndex = 66;
+            this.DeleteProductButton.Text = "Delete";
+            this.DeleteProductButton.UseVisualStyleBackColor = true;
+            this.DeleteProductButton.Click += new System.EventHandler(this.ProductDeleteButton_Click);
+            // 
             // DeleteProductConfirmButton
             // 
             this.DeleteProductConfirmButton.Location = new System.Drawing.Point(197, 540);
@@ -1453,76 +1445,6 @@
             this.DeleteProductConfirmButton.Visible = false;
             this.DeleteProductConfirmButton.Click += new System.EventHandler(this.DeleteProductConfirmButton_Click);
             // 
-            // DeleteProductButton
-            // 
-            this.DeleteProductButton.Location = new System.Drawing.Point(198, 540);
-            this.DeleteProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DeleteProductButton.Name = "DeleteProductButton";
-            this.DeleteProductButton.Size = new System.Drawing.Size(133, 48);
-            this.DeleteProductButton.TabIndex = 66;
-            this.DeleteProductButton.Text = "Delete";
-            this.DeleteProductButton.UseVisualStyleBackColor = true;
-            this.DeleteProductButton.Click += new System.EventHandler(this.ProductDeleteButton_Click);
-            // 
-            // AddProductLabel
-            // 
-            this.AddProductLabel.AutoSize = true;
-            this.AddProductLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddProductLabel.Location = new System.Drawing.Point(58, 613);
-            this.AddProductLabel.Name = "AddProductLabel";
-            this.AddProductLabel.Size = new System.Drawing.Size(101, 20);
-            this.AddProductLabel.TabIndex = 80;
-            this.AddProductLabel.Text = "Add Product";
-            // 
-            // AddProductButton
-            // 
-            this.AddProductButton.Location = new System.Drawing.Point(198, 595);
-            this.AddProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AddProductButton.Name = "AddProductButton";
-            this.AddProductButton.Size = new System.Drawing.Size(133, 55);
-            this.AddProductButton.TabIndex = 81;
-            this.AddProductButton.Text = "Add";
-            this.AddProductButton.UseVisualStyleBackColor = true;
-            this.AddProductButton.Click += new System.EventHandler(this.AddProductButton_Click);
-            // 
-            // PriceTextBox
-            // 
-            this.PriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PriceTextBox.Location = new System.Drawing.Point(481, 624);
-            this.PriceTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(416, 27);
-            this.PriceTextBox.TabIndex = 82;
-            // 
-            // ProductNameTextBox
-            // 
-            this.ProductNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameTextBox.Location = new System.Drawing.Point(481, 593);
-            this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ProductNameTextBox.Name = "ProductNameTextBox";
-            this.ProductNameTextBox.Size = new System.Drawing.Size(416, 27);
-            this.ProductNameTextBox.TabIndex = 83;
-            // 
-            // ProductNameLabel
-            // 
-            this.ProductNameLabel.AutoSize = true;
-            this.ProductNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameLabel.Location = new System.Drawing.Point(344, 596);
-            this.ProductNameLabel.Name = "ProductNameLabel";
-            this.ProductNameLabel.Size = new System.Drawing.Size(121, 20);
-            this.ProductNameLabel.TabIndex = 84;
-            this.ProductNameLabel.Text = "Product Name:";
-            // 
-            // PriceLabel
-            // 
-            this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PriceLabel.Location = new System.Drawing.Point(346, 627);
-            this.PriceLabel.Name = "PriceLabel";
-            this.PriceLabel.Size = new System.Drawing.Size(53, 20);
-            this.PriceLabel.TabIndex = 85;
-            this.PriceLabel.Text = "Price:";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1530,10 +1452,10 @@
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1488, 754);
             this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.CreateAccPanel);
             this.Controls.Add(this.ManageProductsPanel);
             this.Controls.Add(this.Manage_Panel);
             this.Controls.Add(this.LoginPanel);
-            this.Controls.Add(this.CreateAccPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
@@ -1585,13 +1507,7 @@
         private System.Windows.Forms.Label LoginEmail_Label;
         private System.Windows.Forms.TextBox LoginEmail_Box;
         private System.Windows.Forms.Label IncorrectLabel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ToCashBtn;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button ManageAcc_Btn;
         private System.Windows.Forms.Panel Manage_Panel;
         private System.Windows.Forms.Label Pick_Label;

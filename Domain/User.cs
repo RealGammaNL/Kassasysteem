@@ -37,31 +37,35 @@ namespace Domain
             Birthdate = birthdate;
         }
 
-        public void ChangeUserAttribute(string attribute, object newValue)
-        {
-            switch (attribute)
-            {
-                case "SecurityLevel":
-                    SecurityLevel = newValue.ToString(); 
-                    break;
-                case "Firstname":
-                    Firstname = newValue.ToString(); 
-                    break;
-                case "Lastname":
-                    Lastname = newValue.ToString();
-                    break;
-                case "Email":
-                    Email = newValue.ToString();
-                    break;
-                case "Password":
-                    Password = newValue.ToString();
-                    break;
-                case "Birthdate":
-                    Birthdate = (DateTime)newValue;
-                    break;
-                default:
-                    break;
-            }
-        }
+
+        // This is a very unnecessary way to change user attributes. You could use this method if you don't want to use a Get/Set in other programs.
+        // I've personally chosen to use get/set because it makes the code more readable and easy to use, I made this method before that decision and didn't want to throw it away.
+
+        //public void ChangeUserAttribute(string attribute, object newValue)
+        //{
+        //    switch (attribute)
+        //    {
+        //        case "SecurityLevel":
+        //            SecurityLevel = newValue.ToString(); 
+        //            break;
+        //        case "Firstname":
+        //            Firstname = newValue.ToString(); 
+        //            break;
+        //        case "Lastname":
+        //            Lastname = newValue.ToString();
+        //            break;
+        //        case "Email":
+        //            Email = newValue.ToString();
+        //            break;
+        //        case "Password":
+        //            Password = newValue.ToString();
+        //            break;
+        //        case "Birthdate":
+        //            Birthdate = (DateTime)newValue;
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //}
     }
 }
