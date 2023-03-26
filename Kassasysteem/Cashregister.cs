@@ -116,12 +116,12 @@ namespace Kassasysteem
                 String[] ItemStr = { product.ProductName, Receipt.ProductCount(product).ToString(), String.Format("{0:€ 0.00}", (product.Price * Receipt.ProductCount(product))) };
                 bool newProduct = true;
 
-                for (int i = 0; i < listview1.Items.Count; i++)
+                for (int i = 0; i < Receipt_Listview.Items.Count; i++)
                 {
-                    if (listview1.Items[i].SubItems[0].Text == product.ProductName)
+                    if (Receipt_Listview.Items[i].SubItems[0].Text == product.ProductName)
                     {
-                        listview1.Items[i].SubItems[1].Text = Receipt.ProductCount(product).ToString();
-                        listview1.Items[i].SubItems[2].Text = String.Format("{0:€ 0.00}", (product.Price * Receipt.ProductCount(product)));
+                        Receipt_Listview.Items[i].SubItems[1].Text = Receipt.ProductCount(product).ToString();
+                        Receipt_Listview.Items[i].SubItems[2].Text = String.Format("{0:€ 0.00}", (product.Price * Receipt.ProductCount(product)));
                         
                         newProduct = false;
                         break;
@@ -132,7 +132,7 @@ namespace Kassasysteem
                 {
                     ListViewItem Item = new ListViewItem(ItemStr);
 
-                    listview1.Items.Add(Item);
+                    Receipt_Listview.Items.Add(Item);
                 }
             }
             PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
@@ -158,15 +158,15 @@ namespace Kassasysteem
         private void DelProdButton_Click(object sender, EventArgs e)
         {
             List<Product> Products = ProductDAL.GetProducts();
-            if (listview1.SelectedItems.Count != 0)
+            if (Receipt_Listview.SelectedItems.Count != 0)
             {
-                ListViewItem selectedItem = listview1.SelectedItems[0];
+                ListViewItem selectedItem = Receipt_Listview.SelectedItems[0];
                 if (selectedItem != null)
                 {
                     int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
                     if (Amount == 0)
                     {
-                        listview1.Items.Remove(selectedItem);
+                        Receipt_Listview.Items.Remove(selectedItem);
                     }
                     else if (Amount > 0)
                     {
@@ -182,7 +182,7 @@ namespace Kassasysteem
 
                         if (Amount == 0)
                         {
-                            listview1.Items.Remove(selectedItem);
+                            Receipt_Listview.Items.Remove(selectedItem);
                         }
                     }
                 }
@@ -192,16 +192,16 @@ namespace Kassasysteem
         private void DelLineButton_Click(object sender, EventArgs e)
         {
             List<Product> Products = ProductDAL.GetProducts();
-            if (listview1.SelectedItems.Count != 0)
+            if (Receipt_Listview.SelectedItems.Count != 0)
             {
-                ListViewItem selectedItem = listview1.SelectedItems[0];
+                ListViewItem selectedItem = Receipt_Listview.SelectedItems[0];
                 if (selectedItem != null)
                 {
                     Product product = Products.Find(p => p.ProductName == selectedItem.SubItems[0].Text);
                     int Amount = Int32.Parse(selectedItem.SubItems[1].Text);
 
                     Receipt.TotalPrice = Receipt.TotalPrice - (Amount * product.Price);
-                    listview1.Items.Remove(selectedItem);
+                    Receipt_Listview.Items.Remove(selectedItem);
                     PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
 
                     Receipt.DelAllItems(product);
@@ -211,7 +211,7 @@ namespace Kassasysteem
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-            listview1.Items.Clear();
+            Receipt_Listview.Items.Clear();
             Receipt.TotalPrice = 0.00;
             PriceTotal.Text = String.Format("{0:€ 0.00}", Receipt.TotalPrice);
             Receipt.ClearList();

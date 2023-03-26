@@ -144,10 +144,10 @@
             this.CreateAccPanel.Controls.Add(this.Lastname_box);
             this.CreateAccPanel.Controls.Add(this.FirstName_label);
             this.CreateAccPanel.Controls.Add(this.Firstname_box);
-            this.CreateAccPanel.Location = new System.Drawing.Point(200, 81);
-            this.CreateAccPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CreateAccPanel.Location = new System.Drawing.Point(150, 66);
+            this.CreateAccPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CreateAccPanel.Name = "CreateAccPanel";
-            this.CreateAccPanel.Size = new System.Drawing.Size(1093, 676);
+            this.CreateAccPanel.Size = new System.Drawing.Size(820, 549);
             this.CreateAccPanel.TabIndex = 10;
             this.CreateAccPanel.Visible = false;
             // 
@@ -155,18 +155,19 @@
             // 
             this.Createaccount_label.AutoSize = true;
             this.Createaccount_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Createaccount_label.Location = new System.Drawing.Point(45, 327);
+            this.Createaccount_label.Location = new System.Drawing.Point(34, 266);
+            this.Createaccount_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Createaccount_label.Name = "Createaccount_label";
-            this.Createaccount_label.Size = new System.Drawing.Size(125, 20);
+            this.Createaccount_label.Size = new System.Drawing.Size(105, 17);
             this.Createaccount_label.TabIndex = 40;
             this.Createaccount_label.Text = "Create Account";
             // 
             // CreateButton
             // 
-            this.CreateButton.Location = new System.Drawing.Point(179, 314);
-            this.CreateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CreateButton.Location = new System.Drawing.Point(134, 255);
+            this.CreateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(177, 48);
+            this.CreateButton.Size = new System.Drawing.Size(133, 39);
             this.CreateButton.TabIndex = 39;
             this.CreateButton.Text = "Submit";
             this.CreateButton.UseVisualStyleBackColor = true;
@@ -176,27 +177,28 @@
             // 
             this.Password_Label.AutoSize = true;
             this.Password_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password_Label.Location = new System.Drawing.Point(45, 238);
+            this.Password_Label.Location = new System.Drawing.Point(34, 193);
+            this.Password_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Password_Label.Name = "Password_Label";
-            this.Password_Label.Size = new System.Drawing.Size(83, 20);
+            this.Password_Label.Size = new System.Drawing.Size(69, 17);
             this.Password_Label.TabIndex = 35;
             this.Password_Label.Text = "Password";
             // 
             // Password_box
             // 
             this.Password_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password_box.Location = new System.Drawing.Point(179, 231);
-            this.Password_box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Password_box.Location = new System.Drawing.Point(134, 188);
+            this.Password_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Password_box.Name = "Password_box";
             this.Password_box.PasswordChar = '*';
-            this.Password_box.Size = new System.Drawing.Size(759, 27);
+            this.Password_box.Size = new System.Drawing.Size(570, 23);
             this.Password_box.TabIndex = 34;
             // 
             // Monthbox
             // 
             this.Monthbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Monthbox.FormattingEnabled = true;
-            this.Monthbox.ItemHeight = 20;
+            this.Monthbox.ItemHeight = 17;
             this.Monthbox.Items.AddRange(new object[] {
             "1",
             "2",
@@ -210,17 +212,17 @@
             "10",
             "11",
             "12"});
-            this.Monthbox.Location = new System.Drawing.Point(643, 263);
-            this.Monthbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Monthbox.Location = new System.Drawing.Point(482, 214);
+            this.Monthbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Monthbox.Name = "Monthbox";
-            this.Monthbox.Size = new System.Drawing.Size(139, 28);
+            this.Monthbox.Size = new System.Drawing.Size(105, 25);
             this.Monthbox.TabIndex = 33;
             // 
             // Daybox
             // 
             this.Daybox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Daybox.FormattingEnabled = true;
-            this.Daybox.ItemHeight = 20;
+            this.Daybox.ItemHeight = 17;
             this.Daybox.Items.AddRange(new object[] {
             "1",
             "2",
@@ -253,19 +255,20 @@
             "29",
             "30",
             "31"});
-            this.Daybox.Location = new System.Drawing.Point(485, 263);
-            this.Daybox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Daybox.Location = new System.Drawing.Point(364, 214);
+            this.Daybox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Daybox.Name = "Daybox";
-            this.Daybox.Size = new System.Drawing.Size(152, 28);
+            this.Daybox.Size = new System.Drawing.Size(115, 25);
             this.Daybox.TabIndex = 32;
             // 
             // Dateformat_label
             // 
             this.Dateformat_label.AutoSize = true;
             this.Dateformat_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dateformat_label.Location = new System.Drawing.Point(387, 267);
+            this.Dateformat_label.Location = new System.Drawing.Point(290, 217);
+            this.Dateformat_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Dateformat_label.Name = "Dateformat_label";
-            this.Dateformat_label.Size = new System.Drawing.Size(93, 20);
+            this.Dateformat_label.Size = new System.Drawing.Size(76, 17);
             this.Dateformat_label.TabIndex = 31;
             this.Dateformat_label.Text = "DD:MM:YY";
             // 
@@ -273,7 +276,7 @@
             // 
             this.Yearbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Yearbox.FormattingEnabled = true;
-            this.Yearbox.ItemHeight = 20;
+            this.Yearbox.ItemHeight = 17;
             this.Yearbox.Items.AddRange(new object[] {
             "1900",
             "1901",
@@ -399,33 +402,34 @@
             "2021",
             "2022",
             "2023"});
-            this.Yearbox.Location = new System.Drawing.Point(788, 263);
-            this.Yearbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Yearbox.Location = new System.Drawing.Point(591, 214);
+            this.Yearbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Yearbox.Name = "Yearbox";
-            this.Yearbox.Size = new System.Drawing.Size(149, 28);
+            this.Yearbox.Size = new System.Drawing.Size(113, 25);
             this.Yearbox.TabIndex = 30;
             // 
             // Securitybox
             // 
             this.Securitybox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Securitybox.FormattingEnabled = true;
-            this.Securitybox.ItemHeight = 20;
+            this.Securitybox.ItemHeight = 17;
             this.Securitybox.Items.AddRange(new object[] {
             "Manager",
             "Employee"});
-            this.Securitybox.Location = new System.Drawing.Point(179, 98);
-            this.Securitybox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Securitybox.Location = new System.Drawing.Point(134, 80);
+            this.Securitybox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Securitybox.Name = "Securitybox";
-            this.Securitybox.Size = new System.Drawing.Size(759, 28);
+            this.Securitybox.Size = new System.Drawing.Size(570, 25);
             this.Securitybox.TabIndex = 28;
             // 
             // Security_Label
             // 
             this.Security_Label.AutoSize = true;
             this.Security_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Security_Label.Location = new System.Drawing.Point(45, 106);
+            this.Security_Label.Location = new System.Drawing.Point(34, 86);
+            this.Security_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Security_Label.Name = "Security_Label";
-            this.Security_Label.Size = new System.Drawing.Size(115, 20);
+            this.Security_Label.Size = new System.Drawing.Size(97, 17);
             this.Security_Label.TabIndex = 27;
             this.Security_Label.Text = "Security Level";
             // 
@@ -433,9 +437,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 25);
+            this.label1.Location = new System.Drawing.Point(30, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(385, 51);
+            this.label1.Size = new System.Drawing.Size(309, 39);
             this.label1.TabIndex = 26;
             this.label1.Text = "Create an account:";
             // 
@@ -443,9 +448,10 @@
             // 
             this.BirthDay_label.AutoSize = true;
             this.BirthDay_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BirthDay_label.Location = new System.Drawing.Point(45, 267);
+            this.BirthDay_label.Location = new System.Drawing.Point(34, 217);
+            this.BirthDay_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BirthDay_label.Name = "BirthDay_label";
-            this.BirthDay_label.Size = new System.Drawing.Size(102, 20);
+            this.BirthDay_label.Size = new System.Drawing.Size(86, 17);
             this.BirthDay_label.TabIndex = 24;
             this.BirthDay_label.Text = "Date of birth";
             // 
@@ -453,19 +459,20 @@
             // 
             this.EmailAdress_label.AutoSize = true;
             this.EmailAdress_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailAdress_label.Location = new System.Drawing.Point(45, 206);
+            this.EmailAdress_label.Location = new System.Drawing.Point(34, 167);
+            this.EmailAdress_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailAdress_label.Name = "EmailAdress_label";
-            this.EmailAdress_label.Size = new System.Drawing.Size(118, 20);
+            this.EmailAdress_label.Size = new System.Drawing.Size(98, 17);
             this.EmailAdress_label.TabIndex = 23;
             this.EmailAdress_label.Text = "Email Address";
             // 
             // Email_box
             // 
             this.Email_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email_box.Location = new System.Drawing.Point(179, 198);
-            this.Email_box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Email_box.Location = new System.Drawing.Point(134, 161);
+            this.Email_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Email_box.Name = "Email_box";
-            this.Email_box.Size = new System.Drawing.Size(759, 27);
+            this.Email_box.Size = new System.Drawing.Size(570, 23);
             this.Email_box.TabIndex = 22;
             this.Email_box.Text = "xxx@mail.net";
             // 
@@ -473,49 +480,52 @@
             // 
             this.LastName_label.AutoSize = true;
             this.LastName_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastName_label.Location = new System.Drawing.Point(45, 172);
+            this.LastName_label.Location = new System.Drawing.Point(34, 140);
+            this.LastName_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastName_label.Name = "LastName_label";
-            this.LastName_label.Size = new System.Drawing.Size(91, 20);
+            this.LastName_label.Size = new System.Drawing.Size(76, 17);
             this.LastName_label.TabIndex = 21;
             this.LastName_label.Text = "Last Name";
             // 
             // Lastname_box
             // 
             this.Lastname_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lastname_box.Location = new System.Drawing.Point(179, 165);
-            this.Lastname_box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Lastname_box.Location = new System.Drawing.Point(134, 134);
+            this.Lastname_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Lastname_box.Name = "Lastname_box";
-            this.Lastname_box.Size = new System.Drawing.Size(759, 27);
+            this.Lastname_box.Size = new System.Drawing.Size(570, 23);
             this.Lastname_box.TabIndex = 20;
             // 
             // FirstName_label
             // 
             this.FirstName_label.AutoSize = true;
             this.FirstName_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstName_label.Location = new System.Drawing.Point(45, 139);
+            this.FirstName_label.Location = new System.Drawing.Point(34, 113);
+            this.FirstName_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FirstName_label.Name = "FirstName_label";
-            this.FirstName_label.Size = new System.Drawing.Size(92, 20);
+            this.FirstName_label.Size = new System.Drawing.Size(76, 17);
             this.FirstName_label.TabIndex = 19;
             this.FirstName_label.Text = "First Name";
             // 
             // Firstname_box
             // 
             this.Firstname_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Firstname_box.Location = new System.Drawing.Point(179, 132);
-            this.Firstname_box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Firstname_box.Location = new System.Drawing.Point(134, 107);
+            this.Firstname_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Firstname_box.Name = "Firstname_box";
-            this.Firstname_box.Size = new System.Drawing.Size(759, 27);
+            this.Firstname_box.Size = new System.Drawing.Size(570, 23);
             this.Firstname_box.TabIndex = 18;
             // 
             // CreateAccBtn
             // 
-            this.CreateAccBtn.Location = new System.Drawing.Point(971, 15);
-            this.CreateAccBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CreateAccBtn.Location = new System.Drawing.Point(728, 12);
+            this.CreateAccBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CreateAccBtn.Name = "CreateAccBtn";
-            this.CreateAccBtn.Size = new System.Drawing.Size(105, 60);
+            this.CreateAccBtn.Size = new System.Drawing.Size(79, 49);
             this.CreateAccBtn.TabIndex = 37;
             this.CreateAccBtn.Text = "Create Account";
             this.CreateAccBtn.UseVisualStyleBackColor = true;
+            this.CreateAccBtn.Visible = false;
             this.CreateAccBtn.Click += new System.EventHandler(this.CreateAccBtn_Click);
             // 
             // TopPanel
@@ -525,43 +535,46 @@
             this.TopPanel.Controls.Add(this.ToCashBtn);
             this.TopPanel.Controls.Add(this.CreateAccBtn);
             this.TopPanel.Controls.Add(this.ManageAcc_Btn);
-            this.TopPanel.Location = new System.Drawing.Point(200, -2);
-            this.TopPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TopPanel.Location = new System.Drawing.Point(150, -2);
+            this.TopPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1093, 87);
+            this.TopPanel.Size = new System.Drawing.Size(820, 71);
             this.TopPanel.TabIndex = 11;
             // 
             // ManageProductsButton
             // 
-            this.ManageProductsButton.Location = new System.Drawing.Point(126, 15);
-            this.ManageProductsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ManageProductsButton.Location = new System.Drawing.Point(94, 12);
+            this.ManageProductsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ManageProductsButton.Name = "ManageProductsButton";
-            this.ManageProductsButton.Size = new System.Drawing.Size(105, 60);
+            this.ManageProductsButton.Size = new System.Drawing.Size(79, 49);
             this.ManageProductsButton.TabIndex = 40;
             this.ManageProductsButton.Text = "Manage Products";
             this.ManageProductsButton.UseVisualStyleBackColor = true;
+            this.ManageProductsButton.Visible = false;
             this.ManageProductsButton.Click += new System.EventHandler(this.ManageProductsButton_Click);
             // 
             // ToCashBtn
             // 
-            this.ToCashBtn.Location = new System.Drawing.Point(860, 16);
-            this.ToCashBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ToCashBtn.Location = new System.Drawing.Point(645, 13);
+            this.ToCashBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ToCashBtn.Name = "ToCashBtn";
-            this.ToCashBtn.Size = new System.Drawing.Size(105, 60);
+            this.ToCashBtn.Size = new System.Drawing.Size(79, 49);
             this.ToCashBtn.TabIndex = 38;
             this.ToCashBtn.Text = "To Cashregister";
             this.ToCashBtn.UseVisualStyleBackColor = true;
+            this.ToCashBtn.Visible = false;
             this.ToCashBtn.Click += new System.EventHandler(this.ToCashBtn_Click);
             // 
             // ManageAcc_Btn
             // 
-            this.ManageAcc_Btn.Location = new System.Drawing.Point(15, 15);
-            this.ManageAcc_Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ManageAcc_Btn.Location = new System.Drawing.Point(11, 12);
+            this.ManageAcc_Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ManageAcc_Btn.Name = "ManageAcc_Btn";
-            this.ManageAcc_Btn.Size = new System.Drawing.Size(105, 60);
+            this.ManageAcc_Btn.Size = new System.Drawing.Size(79, 49);
             this.ManageAcc_Btn.TabIndex = 39;
             this.ManageAcc_Btn.Text = "Manage Accounts";
             this.ManageAcc_Btn.UseVisualStyleBackColor = true;
+            this.ManageAcc_Btn.Visible = false;
             this.ManageAcc_Btn.Click += new System.EventHandler(this.ManageAcc_Btn_Click);
             // 
             // LoginPanel
@@ -574,30 +587,29 @@
             this.LoginPanel.Controls.Add(this.Loginlabel);
             this.LoginPanel.Controls.Add(this.LoginEmail_Label);
             this.LoginPanel.Controls.Add(this.LoginEmail_Box);
-            this.LoginPanel.Location = new System.Drawing.Point(200, 81);
-            this.LoginPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginPanel.Location = new System.Drawing.Point(150, 66);
+            this.LoginPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(1093, 676);
+            this.LoginPanel.Size = new System.Drawing.Size(820, 549);
             this.LoginPanel.TabIndex = 41;
-            this.LoginPanel.Visible = false;
             // 
             // IncorrectLabel
             // 
             this.IncorrectLabel.AutoSize = true;
             this.IncorrectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncorrectLabel.Location = new System.Drawing.Point(387, 169);
-            this.IncorrectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.IncorrectLabel.Location = new System.Drawing.Point(290, 137);
             this.IncorrectLabel.Name = "IncorrectLabel";
-            this.IncorrectLabel.Size = new System.Drawing.Size(148, 20);
+            this.IncorrectLabel.Size = new System.Drawing.Size(126, 17);
             this.IncorrectLabel.TabIndex = 40;
             this.IncorrectLabel.Text = "Incorrect, try again";
+            this.IncorrectLabel.Visible = false;
             // 
             // SignInButton
             // 
-            this.SignInButton.Location = new System.Drawing.Point(179, 156);
-            this.SignInButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SignInButton.Location = new System.Drawing.Point(134, 127);
+            this.SignInButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SignInButton.Name = "SignInButton";
-            this.SignInButton.Size = new System.Drawing.Size(199, 48);
+            this.SignInButton.Size = new System.Drawing.Size(149, 39);
             this.SignInButton.TabIndex = 39;
             this.SignInButton.Text = "Sign in";
             this.SignInButton.UseVisualStyleBackColor = true;
@@ -607,29 +619,31 @@
             // 
             this.LoginPassword_Label.AutoSize = true;
             this.LoginPassword_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginPassword_Label.Location = new System.Drawing.Point(45, 126);
+            this.LoginPassword_Label.Location = new System.Drawing.Point(34, 102);
+            this.LoginPassword_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoginPassword_Label.Name = "LoginPassword_Label";
-            this.LoginPassword_Label.Size = new System.Drawing.Size(83, 20);
+            this.LoginPassword_Label.Size = new System.Drawing.Size(69, 17);
             this.LoginPassword_Label.TabIndex = 35;
             this.LoginPassword_Label.Text = "Password";
             // 
             // LoginPassword_Box
             // 
             this.LoginPassword_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginPassword_Box.Location = new System.Drawing.Point(179, 119);
-            this.LoginPassword_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginPassword_Box.Location = new System.Drawing.Point(134, 97);
+            this.LoginPassword_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginPassword_Box.Name = "LoginPassword_Box";
             this.LoginPassword_Box.PasswordChar = '*';
-            this.LoginPassword_Box.Size = new System.Drawing.Size(759, 27);
+            this.LoginPassword_Box.Size = new System.Drawing.Size(570, 23);
             this.LoginPassword_Box.TabIndex = 34;
             // 
             // Loginlabel
             // 
             this.Loginlabel.AutoSize = true;
             this.Loginlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Loginlabel.Location = new System.Drawing.Point(40, 25);
+            this.Loginlabel.Location = new System.Drawing.Point(30, 20);
+            this.Loginlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Loginlabel.Name = "Loginlabel";
-            this.Loginlabel.Size = new System.Drawing.Size(128, 51);
+            this.Loginlabel.Size = new System.Drawing.Size(101, 39);
             this.Loginlabel.TabIndex = 26;
             this.Loginlabel.Text = "Login";
             // 
@@ -637,19 +651,20 @@
             // 
             this.LoginEmail_Label.AutoSize = true;
             this.LoginEmail_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginEmail_Label.Location = new System.Drawing.Point(45, 94);
+            this.LoginEmail_Label.Location = new System.Drawing.Point(34, 76);
+            this.LoginEmail_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoginEmail_Label.Name = "LoginEmail_Label";
-            this.LoginEmail_Label.Size = new System.Drawing.Size(118, 20);
+            this.LoginEmail_Label.Size = new System.Drawing.Size(98, 17);
             this.LoginEmail_Label.TabIndex = 23;
             this.LoginEmail_Label.Text = "Email Address";
             // 
             // LoginEmail_Box
             // 
             this.LoginEmail_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginEmail_Box.Location = new System.Drawing.Point(179, 86);
-            this.LoginEmail_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginEmail_Box.Location = new System.Drawing.Point(134, 70);
+            this.LoginEmail_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginEmail_Box.Name = "LoginEmail_Box";
-            this.LoginEmail_Box.Size = new System.Drawing.Size(759, 27);
+            this.LoginEmail_Box.Size = new System.Drawing.Size(570, 23);
             this.LoginEmail_Box.TabIndex = 22;
             this.LoginEmail_Box.Text = "xxx@mail.net";
             // 
@@ -657,19 +672,19 @@
             // 
             this.Manage_Label.AutoSize = true;
             this.Manage_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Manage_Label.Location = new System.Drawing.Point(40, 25);
+            this.Manage_Label.Location = new System.Drawing.Point(30, 20);
+            this.Manage_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Manage_Label.Name = "Manage_Label";
-            this.Manage_Label.Size = new System.Drawing.Size(363, 51);
+            this.Manage_Label.Size = new System.Drawing.Size(290, 39);
             this.Manage_Label.TabIndex = 26;
             this.Manage_Label.Text = "Manage accounts";
             // 
             // PickUser_box
             // 
             this.PickUser_box.FormattingEnabled = true;
-            this.PickUser_box.Location = new System.Drawing.Point(207, 84);
-            this.PickUser_box.Margin = new System.Windows.Forms.Padding(4);
+            this.PickUser_box.Location = new System.Drawing.Point(155, 68);
             this.PickUser_box.Name = "PickUser_box";
-            this.PickUser_box.Size = new System.Drawing.Size(731, 24);
+            this.PickUser_box.Size = new System.Drawing.Size(549, 21);
             this.PickUser_box.TabIndex = 47;
             this.PickUser_box.SelectedValueChanged += new System.EventHandler(this.PickUser_box_SelectedValueChanged);
             // 
@@ -677,9 +692,10 @@
             // 
             this.Pick_Label.AutoSize = true;
             this.Pick_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pick_Label.Location = new System.Drawing.Point(45, 87);
+            this.Pick_Label.Location = new System.Drawing.Point(34, 71);
+            this.Pick_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Pick_Label.Name = "Pick_Label";
-            this.Pick_Label.Size = new System.Drawing.Size(93, 20);
+            this.Pick_Label.Size = new System.Drawing.Size(78, 17);
             this.Pick_Label.TabIndex = 48;
             this.Pick_Label.Text = "Pick a user";
             // 
@@ -712,10 +728,10 @@
             this.Manage_Panel.Controls.Add(this.Manage_Label);
             this.Manage_Panel.Controls.Add(this.UpdateConfirm_Button);
             this.Manage_Panel.Controls.Add(this.ConfirmDelete_Button);
-            this.Manage_Panel.Location = new System.Drawing.Point(200, 81);
-            this.Manage_Panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Manage_Panel.Location = new System.Drawing.Point(150, 66);
+            this.Manage_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Manage_Panel.Name = "Manage_Panel";
-            this.Manage_Panel.Size = new System.Drawing.Size(1093, 676);
+            this.Manage_Panel.Size = new System.Drawing.Size(820, 549);
             this.Manage_Panel.TabIndex = 47;
             this.Manage_Panel.Visible = false;
             // 
@@ -723,9 +739,10 @@
             // 
             this.UpdateConfirm_Label.AutoSize = true;
             this.UpdateConfirm_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateConfirm_Label.Location = new System.Drawing.Point(371, 561);
+            this.UpdateConfirm_Label.Location = new System.Drawing.Point(278, 456);
+            this.UpdateConfirm_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UpdateConfirm_Label.Name = "UpdateConfirm_Label";
-            this.UpdateConfirm_Label.Size = new System.Drawing.Size(354, 20);
+            this.UpdateConfirm_Label.Size = new System.Drawing.Size(301, 17);
             this.UpdateConfirm_Label.TabIndex = 71;
             this.UpdateConfirm_Label.Text = "Are you sure you want to update this account?";
             this.UpdateConfirm_Label.Visible = false;
@@ -734,9 +751,10 @@
             // 
             this.ConfirmDelete_Label.AutoSize = true;
             this.ConfirmDelete_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmDelete_Label.Location = new System.Drawing.Point(372, 614);
+            this.ConfirmDelete_Label.Location = new System.Drawing.Point(279, 499);
+            this.ConfirmDelete_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ConfirmDelete_Label.Name = "ConfirmDelete_Label";
-            this.ConfirmDelete_Label.Size = new System.Drawing.Size(349, 20);
+            this.ConfirmDelete_Label.Size = new System.Drawing.Size(296, 17);
             this.ConfirmDelete_Label.TabIndex = 70;
             this.ConfirmDelete_Label.Text = "Are you sure you want to delete this account?";
             this.ConfirmDelete_Label.Visible = false;
@@ -745,18 +763,19 @@
             // 
             this.DeleteAccount_Label.AutoSize = true;
             this.DeleteAccount_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteAccount_Label.Location = new System.Drawing.Point(47, 614);
+            this.DeleteAccount_Label.Location = new System.Drawing.Point(35, 499);
+            this.DeleteAccount_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DeleteAccount_Label.Name = "DeleteAccount_Label";
-            this.DeleteAccount_Label.Size = new System.Drawing.Size(124, 20);
+            this.DeleteAccount_Label.Size = new System.Drawing.Size(104, 17);
             this.DeleteAccount_Label.TabIndex = 67;
             this.DeleteAccount_Label.Text = "Delete Account";
             // 
             // DeleteAccount_Button
             // 
-            this.DeleteAccount_Button.Location = new System.Drawing.Point(208, 602);
-            this.DeleteAccount_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteAccount_Button.Location = new System.Drawing.Point(156, 489);
+            this.DeleteAccount_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteAccount_Button.Name = "DeleteAccount_Button";
-            this.DeleteAccount_Button.Size = new System.Drawing.Size(159, 48);
+            this.DeleteAccount_Button.Size = new System.Drawing.Size(119, 39);
             this.DeleteAccount_Button.TabIndex = 66;
             this.DeleteAccount_Button.Text = "Delete";
             this.DeleteAccount_Button.UseVisualStyleBackColor = true;
@@ -766,18 +785,19 @@
             // 
             this.UpdateAcc_Lbl.AutoSize = true;
             this.UpdateAcc_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateAcc_Lbl.Location = new System.Drawing.Point(47, 560);
+            this.UpdateAcc_Lbl.Location = new System.Drawing.Point(35, 455);
+            this.UpdateAcc_Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UpdateAcc_Lbl.Name = "UpdateAcc_Lbl";
-            this.UpdateAcc_Lbl.Size = new System.Drawing.Size(128, 20);
+            this.UpdateAcc_Lbl.Size = new System.Drawing.Size(109, 17);
             this.UpdateAcc_Lbl.TabIndex = 65;
             this.UpdateAcc_Lbl.Text = "Update Account";
             // 
             // Update_Btn
             // 
-            this.Update_Btn.Location = new System.Drawing.Point(208, 548);
-            this.Update_Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Update_Btn.Location = new System.Drawing.Point(156, 445);
+            this.Update_Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Update_Btn.Name = "Update_Btn";
-            this.Update_Btn.Size = new System.Drawing.Size(159, 48);
+            this.Update_Btn.Size = new System.Drawing.Size(119, 39);
             this.Update_Btn.TabIndex = 64;
             this.Update_Btn.Text = "Update";
             this.Update_Btn.UseVisualStyleBackColor = true;
@@ -787,27 +807,28 @@
             // 
             this.Password_Update_Label.AutoSize = true;
             this.Password_Update_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password_Update_Label.Location = new System.Drawing.Point(44, 274);
+            this.Password_Update_Label.Location = new System.Drawing.Point(33, 223);
+            this.Password_Update_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Password_Update_Label.Name = "Password_Update_Label";
-            this.Password_Update_Label.Size = new System.Drawing.Size(83, 20);
+            this.Password_Update_Label.Size = new System.Drawing.Size(69, 17);
             this.Password_Update_Label.TabIndex = 63;
             this.Password_Update_Label.Text = "Password";
             // 
             // Password_Update_Box
             // 
             this.Password_Update_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password_Update_Box.Location = new System.Drawing.Point(207, 268);
-            this.Password_Update_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Password_Update_Box.Location = new System.Drawing.Point(155, 218);
+            this.Password_Update_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Password_Update_Box.Name = "Password_Update_Box";
             this.Password_Update_Box.PasswordChar = '*';
-            this.Password_Update_Box.Size = new System.Drawing.Size(729, 27);
+            this.Password_Update_Box.Size = new System.Drawing.Size(548, 23);
             this.Password_Update_Box.TabIndex = 62;
             // 
             // Month_Update_Box
             // 
             this.Month_Update_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Month_Update_Box.FormattingEnabled = true;
-            this.Month_Update_Box.ItemHeight = 20;
+            this.Month_Update_Box.ItemHeight = 17;
             this.Month_Update_Box.Items.AddRange(new object[] {
             "1",
             "2",
@@ -821,17 +842,17 @@
             "10",
             "11",
             "12"});
-            this.Month_Update_Box.Location = new System.Drawing.Point(641, 300);
-            this.Month_Update_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Month_Update_Box.Location = new System.Drawing.Point(481, 244);
+            this.Month_Update_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Month_Update_Box.Name = "Month_Update_Box";
-            this.Month_Update_Box.Size = new System.Drawing.Size(139, 28);
+            this.Month_Update_Box.Size = new System.Drawing.Size(105, 25);
             this.Month_Update_Box.TabIndex = 61;
             // 
             // Day_Update_Box
             // 
             this.Day_Update_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Day_Update_Box.FormattingEnabled = true;
-            this.Day_Update_Box.ItemHeight = 20;
+            this.Day_Update_Box.ItemHeight = 17;
             this.Day_Update_Box.Items.AddRange(new object[] {
             "1",
             "2",
@@ -864,19 +885,20 @@
             "29",
             "30",
             "31"});
-            this.Day_Update_Box.Location = new System.Drawing.Point(484, 300);
-            this.Day_Update_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Day_Update_Box.Location = new System.Drawing.Point(363, 244);
+            this.Day_Update_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Day_Update_Box.Name = "Day_Update_Box";
-            this.Day_Update_Box.Size = new System.Drawing.Size(152, 28);
+            this.Day_Update_Box.Size = new System.Drawing.Size(115, 25);
             this.Day_Update_Box.TabIndex = 60;
             // 
             // DateFormat_Update_Label
             // 
             this.DateFormat_Update_Label.AutoSize = true;
             this.DateFormat_Update_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateFormat_Update_Label.Location = new System.Drawing.Point(385, 304);
+            this.DateFormat_Update_Label.Location = new System.Drawing.Point(289, 247);
+            this.DateFormat_Update_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DateFormat_Update_Label.Name = "DateFormat_Update_Label";
-            this.DateFormat_Update_Label.Size = new System.Drawing.Size(93, 20);
+            this.DateFormat_Update_Label.Size = new System.Drawing.Size(76, 17);
             this.DateFormat_Update_Label.TabIndex = 59;
             this.DateFormat_Update_Label.Text = "DD:MM:YY";
             // 
@@ -884,7 +906,7 @@
             // 
             this.Year_Update_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Year_Update_Box.FormattingEnabled = true;
-            this.Year_Update_Box.ItemHeight = 20;
+            this.Year_Update_Box.ItemHeight = 17;
             this.Year_Update_Box.Items.AddRange(new object[] {
             "1900",
             "1901",
@@ -1010,33 +1032,34 @@
             "2021",
             "2022",
             "2023"});
-            this.Year_Update_Box.Location = new System.Drawing.Point(787, 300);
-            this.Year_Update_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Year_Update_Box.Location = new System.Drawing.Point(590, 244);
+            this.Year_Update_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Year_Update_Box.Name = "Year_Update_Box";
-            this.Year_Update_Box.Size = new System.Drawing.Size(149, 28);
+            this.Year_Update_Box.Size = new System.Drawing.Size(113, 25);
             this.Year_Update_Box.TabIndex = 58;
             // 
             // SecurityLvl_Update_Box
             // 
             this.SecurityLvl_Update_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SecurityLvl_Update_Box.FormattingEnabled = true;
-            this.SecurityLvl_Update_Box.ItemHeight = 20;
+            this.SecurityLvl_Update_Box.ItemHeight = 17;
             this.SecurityLvl_Update_Box.Items.AddRange(new object[] {
             "Manager",
             "Employee"});
-            this.SecurityLvl_Update_Box.Location = new System.Drawing.Point(207, 135);
-            this.SecurityLvl_Update_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SecurityLvl_Update_Box.Location = new System.Drawing.Point(155, 110);
+            this.SecurityLvl_Update_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SecurityLvl_Update_Box.Name = "SecurityLvl_Update_Box";
-            this.SecurityLvl_Update_Box.Size = new System.Drawing.Size(729, 28);
+            this.SecurityLvl_Update_Box.Size = new System.Drawing.Size(548, 25);
             this.SecurityLvl_Update_Box.TabIndex = 57;
             // 
             // SecurityLevel_Update_Label
             // 
             this.SecurityLevel_Update_Label.AutoSize = true;
             this.SecurityLevel_Update_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SecurityLevel_Update_Label.Location = new System.Drawing.Point(44, 143);
+            this.SecurityLevel_Update_Label.Location = new System.Drawing.Point(33, 116);
+            this.SecurityLevel_Update_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SecurityLevel_Update_Label.Name = "SecurityLevel_Update_Label";
-            this.SecurityLevel_Update_Label.Size = new System.Drawing.Size(115, 20);
+            this.SecurityLevel_Update_Label.Size = new System.Drawing.Size(97, 17);
             this.SecurityLevel_Update_Label.TabIndex = 56;
             this.SecurityLevel_Update_Label.Text = "Security Level";
             // 
@@ -1044,9 +1067,10 @@
             // 
             this.DateOfBirth_Update_Label.AutoSize = true;
             this.DateOfBirth_Update_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateOfBirth_Update_Label.Location = new System.Drawing.Point(44, 304);
+            this.DateOfBirth_Update_Label.Location = new System.Drawing.Point(33, 247);
+            this.DateOfBirth_Update_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DateOfBirth_Update_Label.Name = "DateOfBirth_Update_Label";
-            this.DateOfBirth_Update_Label.Size = new System.Drawing.Size(102, 20);
+            this.DateOfBirth_Update_Label.Size = new System.Drawing.Size(86, 17);
             this.DateOfBirth_Update_Label.TabIndex = 55;
             this.DateOfBirth_Update_Label.Text = "Date of birth";
             // 
@@ -1054,19 +1078,20 @@
             // 
             this.Email_Update_Label.AutoSize = true;
             this.Email_Update_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email_Update_Label.Location = new System.Drawing.Point(44, 242);
+            this.Email_Update_Label.Location = new System.Drawing.Point(33, 197);
+            this.Email_Update_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Email_Update_Label.Name = "Email_Update_Label";
-            this.Email_Update_Label.Size = new System.Drawing.Size(118, 20);
+            this.Email_Update_Label.Size = new System.Drawing.Size(98, 17);
             this.Email_Update_Label.TabIndex = 54;
             this.Email_Update_Label.Text = "Email Address";
             // 
             // Email_Update_Box
             // 
             this.Email_Update_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email_Update_Box.Location = new System.Drawing.Point(207, 235);
-            this.Email_Update_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Email_Update_Box.Location = new System.Drawing.Point(155, 191);
+            this.Email_Update_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Email_Update_Box.Name = "Email_Update_Box";
-            this.Email_Update_Box.Size = new System.Drawing.Size(729, 27);
+            this.Email_Update_Box.Size = new System.Drawing.Size(548, 23);
             this.Email_Update_Box.TabIndex = 53;
             this.Email_Update_Box.Text = "xxx@mail.net";
             // 
@@ -1074,46 +1099,48 @@
             // 
             this.Lastname_Update_Label.AutoSize = true;
             this.Lastname_Update_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lastname_Update_Label.Location = new System.Drawing.Point(44, 209);
+            this.Lastname_Update_Label.Location = new System.Drawing.Point(33, 170);
+            this.Lastname_Update_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lastname_Update_Label.Name = "Lastname_Update_Label";
-            this.Lastname_Update_Label.Size = new System.Drawing.Size(91, 20);
+            this.Lastname_Update_Label.Size = new System.Drawing.Size(76, 17);
             this.Lastname_Update_Label.TabIndex = 52;
             this.Lastname_Update_Label.Text = "Last Name";
             // 
             // Lastname_Update_Box
             // 
             this.Lastname_Update_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lastname_Update_Box.Location = new System.Drawing.Point(207, 202);
-            this.Lastname_Update_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Lastname_Update_Box.Location = new System.Drawing.Point(155, 164);
+            this.Lastname_Update_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Lastname_Update_Box.Name = "Lastname_Update_Box";
-            this.Lastname_Update_Box.Size = new System.Drawing.Size(729, 27);
+            this.Lastname_Update_Box.Size = new System.Drawing.Size(548, 23);
             this.Lastname_Update_Box.TabIndex = 51;
             // 
             // Firstname_Update_Label
             // 
             this.Firstname_Update_Label.AutoSize = true;
             this.Firstname_Update_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Firstname_Update_Label.Location = new System.Drawing.Point(44, 176);
+            this.Firstname_Update_Label.Location = new System.Drawing.Point(33, 143);
+            this.Firstname_Update_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Firstname_Update_Label.Name = "Firstname_Update_Label";
-            this.Firstname_Update_Label.Size = new System.Drawing.Size(92, 20);
+            this.Firstname_Update_Label.Size = new System.Drawing.Size(76, 17);
             this.Firstname_Update_Label.TabIndex = 50;
             this.Firstname_Update_Label.Text = "First Name";
             // 
             // Firstname_Update_Box
             // 
             this.Firstname_Update_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Firstname_Update_Box.Location = new System.Drawing.Point(207, 169);
-            this.Firstname_Update_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Firstname_Update_Box.Location = new System.Drawing.Point(155, 137);
+            this.Firstname_Update_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Firstname_Update_Box.Name = "Firstname_Update_Box";
-            this.Firstname_Update_Box.Size = new System.Drawing.Size(729, 27);
+            this.Firstname_Update_Box.Size = new System.Drawing.Size(548, 23);
             this.Firstname_Update_Box.TabIndex = 49;
             // 
             // UpdateConfirm_Button
             // 
-            this.UpdateConfirm_Button.Location = new System.Drawing.Point(207, 549);
-            this.UpdateConfirm_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UpdateConfirm_Button.Location = new System.Drawing.Point(155, 446);
+            this.UpdateConfirm_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpdateConfirm_Button.Name = "UpdateConfirm_Button";
-            this.UpdateConfirm_Button.Size = new System.Drawing.Size(159, 48);
+            this.UpdateConfirm_Button.Size = new System.Drawing.Size(119, 39);
             this.UpdateConfirm_Button.TabIndex = 69;
             this.UpdateConfirm_Button.Text = "Confirm";
             this.UpdateConfirm_Button.UseVisualStyleBackColor = true;
@@ -1122,10 +1149,10 @@
             // 
             // ConfirmDelete_Button
             // 
-            this.ConfirmDelete_Button.Location = new System.Drawing.Point(207, 602);
-            this.ConfirmDelete_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ConfirmDelete_Button.Location = new System.Drawing.Point(155, 489);
+            this.ConfirmDelete_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ConfirmDelete_Button.Name = "ConfirmDelete_Button";
-            this.ConfirmDelete_Button.Size = new System.Drawing.Size(159, 48);
+            this.ConfirmDelete_Button.Size = new System.Drawing.Size(119, 39);
             this.ConfirmDelete_Button.TabIndex = 68;
             this.ConfirmDelete_Button.Text = "Confirm";
             this.ConfirmDelete_Button.UseVisualStyleBackColor = true;
@@ -1158,10 +1185,10 @@
             this.ManageProductsPanel.Controls.Add(this.UpdateProductConfirmButton);
             this.ManageProductsPanel.Controls.Add(this.DeleteProductButton);
             this.ManageProductsPanel.Controls.Add(this.DeleteProductConfirmButton);
-            this.ManageProductsPanel.Location = new System.Drawing.Point(200, 83);
-            this.ManageProductsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ManageProductsPanel.Location = new System.Drawing.Point(150, 67);
+            this.ManageProductsPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ManageProductsPanel.Name = "ManageProductsPanel";
-            this.ManageProductsPanel.Size = new System.Drawing.Size(1093, 676);
+            this.ManageProductsPanel.Size = new System.Drawing.Size(820, 549);
             this.ManageProductsPanel.TabIndex = 72;
             this.ManageProductsPanel.Visible = false;
             // 
@@ -1169,9 +1196,10 @@
             // 
             this.PriceLabel.AutoSize = true;
             this.PriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PriceLabel.Location = new System.Drawing.Point(346, 627);
+            this.PriceLabel.Location = new System.Drawing.Point(260, 509);
+            this.PriceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PriceLabel.Name = "PriceLabel";
-            this.PriceLabel.Size = new System.Drawing.Size(53, 20);
+            this.PriceLabel.Size = new System.Drawing.Size(44, 17);
             this.PriceLabel.TabIndex = 85;
             this.PriceLabel.Text = "Price:";
             // 
@@ -1179,36 +1207,37 @@
             // 
             this.ProductNameLabel.AutoSize = true;
             this.ProductNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameLabel.Location = new System.Drawing.Point(344, 596);
+            this.ProductNameLabel.Location = new System.Drawing.Point(258, 484);
+            this.ProductNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProductNameLabel.Name = "ProductNameLabel";
-            this.ProductNameLabel.Size = new System.Drawing.Size(121, 20);
+            this.ProductNameLabel.Size = new System.Drawing.Size(102, 17);
             this.ProductNameLabel.TabIndex = 84;
             this.ProductNameLabel.Text = "Product Name:";
             // 
             // ProductNameTextBox
             // 
             this.ProductNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameTextBox.Location = new System.Drawing.Point(481, 593);
-            this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ProductNameTextBox.Location = new System.Drawing.Point(361, 482);
+            this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProductNameTextBox.Name = "ProductNameTextBox";
-            this.ProductNameTextBox.Size = new System.Drawing.Size(416, 27);
+            this.ProductNameTextBox.Size = new System.Drawing.Size(313, 23);
             this.ProductNameTextBox.TabIndex = 83;
             // 
             // PriceTextBox
             // 
             this.PriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PriceTextBox.Location = new System.Drawing.Point(481, 624);
-            this.PriceTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PriceTextBox.Location = new System.Drawing.Point(361, 507);
+            this.PriceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(416, 27);
+            this.PriceTextBox.Size = new System.Drawing.Size(313, 23);
             this.PriceTextBox.TabIndex = 82;
             // 
             // AddProductButton
             // 
-            this.AddProductButton.Location = new System.Drawing.Point(198, 595);
-            this.AddProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddProductButton.Location = new System.Drawing.Point(148, 483);
+            this.AddProductButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddProductButton.Name = "AddProductButton";
-            this.AddProductButton.Size = new System.Drawing.Size(133, 55);
+            this.AddProductButton.Size = new System.Drawing.Size(100, 45);
             this.AddProductButton.TabIndex = 81;
             this.AddProductButton.Text = "Add";
             this.AddProductButton.UseVisualStyleBackColor = true;
@@ -1218,9 +1247,10 @@
             // 
             this.AddProductLabel.AutoSize = true;
             this.AddProductLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddProductLabel.Location = new System.Drawing.Point(58, 613);
+            this.AddProductLabel.Location = new System.Drawing.Point(44, 498);
+            this.AddProductLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AddProductLabel.Name = "AddProductLabel";
-            this.AddProductLabel.Size = new System.Drawing.Size(101, 20);
+            this.AddProductLabel.Size = new System.Drawing.Size(86, 17);
             this.AddProductLabel.TabIndex = 80;
             this.AddProductLabel.Text = "Add Product";
             // 
@@ -1232,14 +1262,15 @@
             this.Category,
             this.ProductName,
             this.ProductPrice});
-            this.ProductGridView.Location = new System.Drawing.Point(57, 162);
+            this.ProductGridView.Location = new System.Drawing.Point(43, 132);
+            this.ProductGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProductGridView.MultiSelect = false;
             this.ProductGridView.Name = "ProductGridView";
             this.ProductGridView.RowHeadersVisible = false;
             this.ProductGridView.RowHeadersWidth = 51;
             this.ProductGridView.RowTemplate.Height = 24;
             this.ProductGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ProductGridView.Size = new System.Drawing.Size(981, 301);
+            this.ProductGridView.Size = new System.Drawing.Size(736, 245);
             this.ProductGridView.TabIndex = 79;
             // 
             // ID_Column
@@ -1272,10 +1303,10 @@
             // 
             // BroodButton
             // 
-            this.BroodButton.Location = new System.Drawing.Point(905, 84);
-            this.BroodButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BroodButton.Location = new System.Drawing.Point(679, 68);
+            this.BroodButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BroodButton.Name = "BroodButton";
-            this.BroodButton.Size = new System.Drawing.Size(133, 60);
+            this.BroodButton.Size = new System.Drawing.Size(100, 49);
             this.BroodButton.TabIndex = 78;
             this.BroodButton.Text = "Brood";
             this.BroodButton.UseVisualStyleBackColor = true;
@@ -1283,10 +1314,10 @@
             // 
             // DrankButton
             // 
-            this.DrankButton.Location = new System.Drawing.Point(764, 84);
-            this.DrankButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DrankButton.Location = new System.Drawing.Point(573, 68);
+            this.DrankButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DrankButton.Name = "DrankButton";
-            this.DrankButton.Size = new System.Drawing.Size(133, 60);
+            this.DrankButton.Size = new System.Drawing.Size(100, 49);
             this.DrankButton.TabIndex = 77;
             this.DrankButton.Text = "Drank";
             this.DrankButton.UseVisualStyleBackColor = true;
@@ -1294,10 +1325,10 @@
             // 
             // KaasButton
             // 
-            this.KaasButton.Location = new System.Drawing.Point(622, 84);
-            this.KaasButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.KaasButton.Location = new System.Drawing.Point(466, 68);
+            this.KaasButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.KaasButton.Name = "KaasButton";
-            this.KaasButton.Size = new System.Drawing.Size(133, 60);
+            this.KaasButton.Size = new System.Drawing.Size(100, 49);
             this.KaasButton.TabIndex = 76;
             this.KaasButton.Text = "Kaas";
             this.KaasButton.UseVisualStyleBackColor = true;
@@ -1305,10 +1336,10 @@
             // 
             // VleesButton
             // 
-            this.VleesButton.Location = new System.Drawing.Point(481, 84);
-            this.VleesButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VleesButton.Location = new System.Drawing.Point(361, 68);
+            this.VleesButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VleesButton.Name = "VleesButton";
-            this.VleesButton.Size = new System.Drawing.Size(133, 60);
+            this.VleesButton.Size = new System.Drawing.Size(100, 49);
             this.VleesButton.TabIndex = 75;
             this.VleesButton.Text = "Vlees";
             this.VleesButton.UseVisualStyleBackColor = true;
@@ -1316,10 +1347,10 @@
             // 
             // FruitButton
             // 
-            this.FruitButton.Location = new System.Drawing.Point(340, 84);
-            this.FruitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FruitButton.Location = new System.Drawing.Point(255, 68);
+            this.FruitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FruitButton.Name = "FruitButton";
-            this.FruitButton.Size = new System.Drawing.Size(133, 60);
+            this.FruitButton.Size = new System.Drawing.Size(100, 49);
             this.FruitButton.TabIndex = 74;
             this.FruitButton.Text = "Fruit";
             this.FruitButton.UseVisualStyleBackColor = true;
@@ -1327,10 +1358,10 @@
             // 
             // GroenteButton
             // 
-            this.GroenteButton.Location = new System.Drawing.Point(198, 84);
-            this.GroenteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GroenteButton.Location = new System.Drawing.Point(148, 68);
+            this.GroenteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GroenteButton.Name = "GroenteButton";
-            this.GroenteButton.Size = new System.Drawing.Size(133, 60);
+            this.GroenteButton.Size = new System.Drawing.Size(100, 49);
             this.GroenteButton.TabIndex = 73;
             this.GroenteButton.Text = "Groente";
             this.GroenteButton.UseVisualStyleBackColor = true;
@@ -1338,10 +1369,10 @@
             // 
             // ZuivelButton
             // 
-            this.ZuivelButton.Location = new System.Drawing.Point(57, 84);
-            this.ZuivelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ZuivelButton.Location = new System.Drawing.Point(43, 68);
+            this.ZuivelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ZuivelButton.Name = "ZuivelButton";
-            this.ZuivelButton.Size = new System.Drawing.Size(133, 60);
+            this.ZuivelButton.Size = new System.Drawing.Size(100, 49);
             this.ZuivelButton.TabIndex = 72;
             this.ZuivelButton.Text = "Zuivel";
             this.ZuivelButton.UseVisualStyleBackColor = true;
@@ -1351,9 +1382,10 @@
             // 
             this.UpdateButtonConfirmLabel.AutoSize = true;
             this.UpdateButtonConfirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateButtonConfirmLabel.Location = new System.Drawing.Point(343, 501);
+            this.UpdateButtonConfirmLabel.Location = new System.Drawing.Point(257, 407);
+            this.UpdateButtonConfirmLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UpdateButtonConfirmLabel.Name = "UpdateButtonConfirmLabel";
-            this.UpdateButtonConfirmLabel.Size = new System.Drawing.Size(351, 20);
+            this.UpdateButtonConfirmLabel.Size = new System.Drawing.Size(299, 17);
             this.UpdateButtonConfirmLabel.TabIndex = 71;
             this.UpdateButtonConfirmLabel.Text = "Are you sure you want to update this product?";
             this.UpdateButtonConfirmLabel.Visible = false;
@@ -1362,9 +1394,10 @@
             // 
             this.DeleteButtonConfirmLabel.AutoSize = true;
             this.DeleteButtonConfirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteButtonConfirmLabel.Location = new System.Drawing.Point(344, 554);
+            this.DeleteButtonConfirmLabel.Location = new System.Drawing.Point(258, 450);
+            this.DeleteButtonConfirmLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DeleteButtonConfirmLabel.Name = "DeleteButtonConfirmLabel";
-            this.DeleteButtonConfirmLabel.Size = new System.Drawing.Size(346, 20);
+            this.DeleteButtonConfirmLabel.Size = new System.Drawing.Size(294, 17);
             this.DeleteButtonConfirmLabel.TabIndex = 70;
             this.DeleteButtonConfirmLabel.Text = "Are you sure you want to delete this product?";
             this.DeleteButtonConfirmLabel.Visible = false;
@@ -1373,9 +1406,10 @@
             // 
             this.DeleteProductLabel.AutoSize = true;
             this.DeleteProductLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteProductLabel.Location = new System.Drawing.Point(58, 552);
+            this.DeleteProductLabel.Location = new System.Drawing.Point(44, 448);
+            this.DeleteProductLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DeleteProductLabel.Name = "DeleteProductLabel";
-            this.DeleteProductLabel.Size = new System.Drawing.Size(119, 20);
+            this.DeleteProductLabel.Size = new System.Drawing.Size(101, 17);
             this.DeleteProductLabel.TabIndex = 67;
             this.DeleteProductLabel.Text = "Delete product";
             // 
@@ -1383,9 +1417,10 @@
             // 
             this.UpdateProductLabel.AutoSize = true;
             this.UpdateProductLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateProductLabel.Location = new System.Drawing.Point(58, 498);
+            this.UpdateProductLabel.Location = new System.Drawing.Point(44, 405);
+            this.UpdateProductLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UpdateProductLabel.Name = "UpdateProductLabel";
-            this.UpdateProductLabel.Size = new System.Drawing.Size(123, 20);
+            this.UpdateProductLabel.Size = new System.Drawing.Size(106, 17);
             this.UpdateProductLabel.TabIndex = 65;
             this.UpdateProductLabel.Text = "Update product";
             // 
@@ -1393,18 +1428,19 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(40, 25);
+            this.label20.Location = new System.Drawing.Point(30, 20);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(360, 51);
+            this.label20.Size = new System.Drawing.Size(288, 39);
             this.label20.TabIndex = 26;
             this.label20.Text = "Manage Products";
             // 
             // UpdateProductButton
             // 
-            this.UpdateProductButton.Location = new System.Drawing.Point(198, 483);
-            this.UpdateProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UpdateProductButton.Location = new System.Drawing.Point(148, 392);
+            this.UpdateProductButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpdateProductButton.Name = "UpdateProductButton";
-            this.UpdateProductButton.Size = new System.Drawing.Size(133, 48);
+            this.UpdateProductButton.Size = new System.Drawing.Size(100, 39);
             this.UpdateProductButton.TabIndex = 64;
             this.UpdateProductButton.Text = "Update";
             this.UpdateProductButton.UseVisualStyleBackColor = true;
@@ -1412,10 +1448,10 @@
             // 
             // UpdateProductConfirmButton
             // 
-            this.UpdateProductConfirmButton.Location = new System.Drawing.Point(198, 483);
-            this.UpdateProductConfirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UpdateProductConfirmButton.Location = new System.Drawing.Point(148, 392);
+            this.UpdateProductConfirmButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpdateProductConfirmButton.Name = "UpdateProductConfirmButton";
-            this.UpdateProductConfirmButton.Size = new System.Drawing.Size(133, 48);
+            this.UpdateProductConfirmButton.Size = new System.Drawing.Size(100, 39);
             this.UpdateProductConfirmButton.TabIndex = 69;
             this.UpdateProductConfirmButton.Text = "Confirm";
             this.UpdateProductConfirmButton.UseVisualStyleBackColor = true;
@@ -1424,10 +1460,10 @@
             // 
             // DeleteProductButton
             // 
-            this.DeleteProductButton.Location = new System.Drawing.Point(198, 540);
-            this.DeleteProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteProductButton.Location = new System.Drawing.Point(148, 439);
+            this.DeleteProductButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteProductButton.Name = "DeleteProductButton";
-            this.DeleteProductButton.Size = new System.Drawing.Size(133, 48);
+            this.DeleteProductButton.Size = new System.Drawing.Size(100, 39);
             this.DeleteProductButton.TabIndex = 66;
             this.DeleteProductButton.Text = "Delete";
             this.DeleteProductButton.UseVisualStyleBackColor = true;
@@ -1435,10 +1471,10 @@
             // 
             // DeleteProductConfirmButton
             // 
-            this.DeleteProductConfirmButton.Location = new System.Drawing.Point(197, 540);
-            this.DeleteProductConfirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteProductConfirmButton.Location = new System.Drawing.Point(148, 439);
+            this.DeleteProductConfirmButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteProductConfirmButton.Name = "DeleteProductConfirmButton";
-            this.DeleteProductConfirmButton.Size = new System.Drawing.Size(133, 48);
+            this.DeleteProductConfirmButton.Size = new System.Drawing.Size(100, 39);
             this.DeleteProductConfirmButton.TabIndex = 68;
             this.DeleteProductConfirmButton.Text = "Confirm";
             this.DeleteProductConfirmButton.UseVisualStyleBackColor = true;
@@ -1447,17 +1483,17 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1488, 754);
+            this.ClientSize = new System.Drawing.Size(1116, 613);
             this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.CreateAccPanel);
             this.Controls.Add(this.ManageProductsPanel);
             this.Controls.Add(this.Manage_Panel);
-            this.Controls.Add(this.LoginPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";

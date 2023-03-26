@@ -24,7 +24,8 @@ namespace Domain
 
         public void DelItem(Product product)
         {
-            Products.Remove(product);
+            var foundproduct = Products.Find(p => p.Id == product.Id);
+            Products.Remove(foundproduct);
         }
 
         public void DelAllItems(Product product)
@@ -32,9 +33,10 @@ namespace Domain
             bool AllDeleted = false;
             while (!AllDeleted)
             {
-                if (Products.Contains(product))
+                var foundproduct = Products.Find(p => p.Id == product.Id);
+                if (Products.Contains(foundproduct))
                 {
-                    Products.Remove(product);
+                    Products.Remove(foundproduct);
                 }
                 else
                 {

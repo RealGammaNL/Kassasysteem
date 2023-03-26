@@ -55,7 +55,7 @@
             this.OrderLabel = new System.Windows.Forms.Label();
             this.PriceTotal = new System.Windows.Forms.Label();
             this.TotalPriceLabel = new System.Windows.Forms.Label();
-            this.listview1 = new System.Windows.Forms.ListView();
+            this.Receipt_Listview = new System.Windows.Forms.ListView();
             this.Product = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -140,6 +140,7 @@
             // 
             // button25
             // 
+            this.button25.Enabled = false;
             this.button25.Location = new System.Drawing.Point(90, 277);
             this.button25.Margin = new System.Windows.Forms.Padding(2);
             this.button25.Name = "button25";
@@ -150,6 +151,7 @@
             // 
             // button26
             // 
+            this.button26.Enabled = false;
             this.button26.Location = new System.Drawing.Point(174, 277);
             this.button26.Margin = new System.Windows.Forms.Padding(2);
             this.button26.Name = "button26";
@@ -160,6 +162,7 @@
             // 
             // button27
             // 
+            this.button27.Enabled = false;
             this.button27.Location = new System.Drawing.Point(174, 361);
             this.button27.Margin = new System.Windows.Forms.Padding(2);
             this.button27.Name = "button27";
@@ -170,6 +173,7 @@
             // 
             // button28
             // 
+            this.button28.Enabled = false;
             this.button28.Location = new System.Drawing.Point(90, 361);
             this.button28.Margin = new System.Windows.Forms.Padding(2);
             this.button28.Name = "button28";
@@ -180,6 +184,7 @@
             // 
             // button30
             // 
+            this.button30.Enabled = false;
             this.button30.Location = new System.Drawing.Point(174, 445);
             this.button30.Margin = new System.Windows.Forms.Padding(2);
             this.button30.Name = "button30";
@@ -190,6 +195,7 @@
             // 
             // button31
             // 
+            this.button31.Enabled = false;
             this.button31.Location = new System.Drawing.Point(90, 445);
             this.button31.Margin = new System.Windows.Forms.Padding(2);
             this.button31.Name = "button31";
@@ -200,6 +206,7 @@
             // 
             // button34
             // 
+            this.button34.Enabled = false;
             this.button34.Location = new System.Drawing.Point(90, 529);
             this.button34.Margin = new System.Windows.Forms.Padding(2);
             this.button34.Name = "button34";
@@ -210,6 +217,7 @@
             // 
             // button36
             // 
+            this.button36.Enabled = false;
             this.button36.Location = new System.Drawing.Point(174, 529);
             this.button36.Margin = new System.Windows.Forms.Padding(2);
             this.button36.Name = "button36";
@@ -220,6 +228,7 @@
             // 
             // button37
             // 
+            this.button37.Enabled = false;
             this.button37.Location = new System.Drawing.Point(258, 529);
             this.button37.Margin = new System.Windows.Forms.Padding(2);
             this.button37.Name = "button37";
@@ -230,6 +239,7 @@
             // 
             // button38
             // 
+            this.button38.Enabled = false;
             this.button38.Location = new System.Drawing.Point(258, 445);
             this.button38.Margin = new System.Windows.Forms.Padding(2);
             this.button38.Name = "button38";
@@ -240,6 +250,7 @@
             // 
             // button39
             // 
+            this.button39.Enabled = false;
             this.button39.Location = new System.Drawing.Point(258, 361);
             this.button39.Margin = new System.Windows.Forms.Padding(2);
             this.button39.Name = "button39";
@@ -250,6 +261,7 @@
             // 
             // button40
             // 
+            this.button40.Enabled = false;
             this.button40.Location = new System.Drawing.Point(258, 277);
             this.button40.Margin = new System.Windows.Forms.Padding(2);
             this.button40.Name = "button40";
@@ -340,21 +352,21 @@
             this.TotalPriceLabel.TabIndex = 78;
             this.TotalPriceLabel.Text = "Total Price";
             // 
-            // listview1
+            // Receipt_Listview
             // 
-            this.listview1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Receipt_Listview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Product,
             this.Amount,
             this.Price});
-            this.listview1.FullRowSelect = true;
-            this.listview1.GridLines = true;
-            this.listview1.HideSelection = false;
-            this.listview1.Location = new System.Drawing.Point(6, 31);
-            this.listview1.Name = "listview1";
-            this.listview1.Size = new System.Drawing.Size(332, 241);
-            this.listview1.TabIndex = 79;
-            this.listview1.UseCompatibleStateImageBehavior = false;
-            this.listview1.View = System.Windows.Forms.View.Details;
+            this.Receipt_Listview.FullRowSelect = true;
+            this.Receipt_Listview.GridLines = true;
+            this.Receipt_Listview.HideSelection = false;
+            this.Receipt_Listview.Location = new System.Drawing.Point(6, 31);
+            this.Receipt_Listview.Name = "Receipt_Listview";
+            this.Receipt_Listview.Size = new System.Drawing.Size(332, 241);
+            this.Receipt_Listview.TabIndex = 79;
+            this.Receipt_Listview.UseCompatibleStateImageBehavior = false;
+            this.Receipt_Listview.View = System.Windows.Forms.View.Details;
             // 
             // Product
             // 
@@ -378,7 +390,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1116, 613);
-            this.Controls.Add(this.listview1);
+            this.Controls.Add(this.Receipt_Listview);
             this.Controls.Add(this.TotalPriceLabel);
             this.Controls.Add(this.PriceTotal);
             this.Controls.Add(this.OrderLabel);
@@ -408,7 +420,7 @@
             this.Controls.Add(this.ZuivelButton);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cashregister";
-            this.Text = "Form1";
+            this.Text = "Cashregister";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Cashregister_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -444,7 +456,7 @@
         private System.Windows.Forms.Label OrderLabel;
         private System.Windows.Forms.Label PriceTotal;
         private System.Windows.Forms.Label TotalPriceLabel;
-        private System.Windows.Forms.ListView listview1;
+        private System.Windows.Forms.ListView Receipt_Listview;
         private System.Windows.Forms.ColumnHeader Product;
         private System.Windows.Forms.ColumnHeader Amount;
         private System.Windows.Forms.ColumnHeader Price;

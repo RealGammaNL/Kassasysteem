@@ -23,21 +23,6 @@ namespace Kassasysteem
         public Login()
         {
             InitializeComponent();
-            InitializeControls();
-        }
-
-
-        public void InitializeControls()
-        {
-            LoginPanel.Show();
-            CreateAccPanel.Hide();
-            Manage_Panel.Hide();
-            ManageAcc_Btn.Hide();
-            ManageProductsButton.Hide();
-            FillPickUser_Box();
-            ToCashBtn.Hide();
-            CreateAccBtn.Hide();
-            IncorrectLabel.Hide();
         }
 
         private void FillPickUser_Box()
@@ -67,6 +52,7 @@ namespace Kassasysteem
 
         private void ManageAcc_Btn_Click(object sender, EventArgs e)
         {
+            FillPickUser_Box();
             LoginPanel.Hide();
             CreateAccPanel.Hide();
             ManageProductsPanel.Hide();
@@ -82,6 +68,17 @@ namespace Kassasysteem
             FillPickUser_Box();
         }
 
+        private void ResetCreatePanel()
+        {
+            Securitybox.ResetText();
+            Firstname_box.Clear();
+            Lastname_box.Clear();
+            Email_box.Text = "xxx@mail.com";
+            Password_box.Clear();
+            Yearbox.ResetText();
+            Monthbox.ResetText();
+            Daybox.ResetText();
+        }
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
@@ -135,6 +132,31 @@ namespace Kassasysteem
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private User DeterminePickedUser()
+        {
+            string[] attributes = PickUser_box.Text.Split(' ');
+            int Chosen_UserId = 0;
+
+            foreach (string attribute in attributes)
+            {
+                if (int.TryParse(attribute, out _))
+                {
+                    Chosen_UserId = Int32.Parse(attribute);
+                    break;
+                }
+            }
+
+            foreach (User user in Users)
+            {
+                if (user.Id == Chosen_UserId)
+                {
+                    return user;
+                }
+            }
+
+            return null;
         }
 
         private void PickUser_box_SelectedValueChanged(object sender, EventArgs e)
@@ -280,42 +302,6 @@ namespace Kassasysteem
             ConfirmDelete_Label.Hide();
         }
 
-        private User DeterminePickedUser()
-        {
-            string[] attributes = PickUser_box.Text.Split(' ');
-            int Chosen_UserId = 0;
-
-            foreach (string attribute in attributes)
-            {
-                if (int.TryParse(attribute, out _))
-                {
-                    Chosen_UserId = Int32.Parse(attribute);
-                    break;
-                }
-            }
-
-            foreach (User user in Users)
-            {
-                if ( user.Id == Chosen_UserId )
-                {
-                    return user;
-                }
-            }
-
-            return null;
-        }
-
-        private void ResetCreatePanel()
-        {
-            Securitybox.ResetText();
-            Firstname_box.Clear();
-            Lastname_box.Clear();
-            Email_box.Text = "xxx@mail.com";
-            Password_box.Clear();
-            Yearbox.ResetText();
-            Monthbox.ResetText();
-            Daybox.ResetText();
-        }
         private void ResetManagementPanel()
         {
             PickUser_box.ResetText();
@@ -367,7 +353,7 @@ namespace Kassasysteem
         {
             foreach (DataGridViewRow row in ProductGridView.SelectedRows)
             {
-                Product product = new Product((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, double.Parse((string)row.Cells[3].Value));
+                Product product = new Product((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, (double)row.Cells[3].Value);
                 ProductDAL.UpdateProduct(product);
             }
             UpdateProductButton.Show();
@@ -386,7 +372,7 @@ namespace Kassasysteem
         {
             foreach (DataGridViewRow row in ProductGridView.SelectedRows)
             {
-                Product product = new Product((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, double.Parse((string)row.Cells[3].Value));
+                Product product = new Product((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, (double)row.Cells[3].Value);
                 ProductDAL.DeleteProduct(product);
                 ProductGridView.Rows.RemoveAt(row.Index);
             }
